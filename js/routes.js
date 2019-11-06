@@ -15,17 +15,11 @@ const mainRoutes = [{
     },
     {
         path: '/email',
-        component: emailApp,
-        children: [
-            {
-                path: '/',
-                component: emailListCmp
-            },
-            {
-                path: '/:id',
-                component: emailDetailsCmp
-            }
-        ]
+        component: emailApp
+    },
+    {
+        path: '/email/:id',
+        component: emailDetailsCmp
     }
 ]
 

@@ -11,23 +11,19 @@ export default {
                     <span>Subject</span>
                     <span>Recived At</span>
                 </li>
-                <!-- <router-link :to=""> -->
                 <email-preview class="clean-list" v-if="emails" v-for="(email,idx) in emails" :email="email" :key="email.id" :emails="emails" :idx="idx"></email-preview>
-                <!-- </router-link> -->
             </ul>
         </section>
     `,
     data(){
         return{
             emails:null,
-
         }
     },
     created(){
         console.log('Loading eMails');
         this.emails=mailService.query();
         console.log(this.emails);
-        
     },
     components:{
         emailPreview

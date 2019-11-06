@@ -5,7 +5,7 @@ import storageService from '../../../main-service/storage.js';
 
 export default {
   query,
-  getMailById
+  getEmailById
 }
 
 
@@ -20,7 +20,8 @@ var gEmails = [{
     isDeleted: false,
     sendto: '',
     isSent: false,
-    isFavorite: false
+    isFavorite: false,
+    isPreview:true
   },
   {
     id: 'BBB',
@@ -32,7 +33,8 @@ var gEmails = [{
     isDeleted: false,
     sendto: '',
     isSent: false,
-    isFavorite: false
+    isFavorite: false,
+    isPreview:false
   },
   {
     id: 'CCC',
@@ -44,7 +46,8 @@ var gEmails = [{
     isDeleted: true,
     sendto: '',
     isSent: false,
-    isFavorite: false
+    isFavorite: false,
+    isPreview:false
   },
   {
     id: 'DDD',
@@ -56,11 +59,10 @@ var gEmails = [{
     isDeleted: false,
     sendto: '',
     isSent: true,
-    isFavorite: true
+    isFavorite: true,
+    isPreview:false
   }
 ]
-
-
 
 
 function query() {
@@ -73,7 +75,7 @@ function query() {
   return gEmails;
 }
 
-function getMailById(emailId) {
+function getEmailById(emailId) {
   const email = gEmails.find(email => email.id === emailId);
-  return email;
+  return Promise.resolve(email);
 }
