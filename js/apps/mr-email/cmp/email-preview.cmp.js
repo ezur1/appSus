@@ -17,9 +17,6 @@ export default {
 
         </li>
     `,
-    data(){
-        
-    },
     methods:{
         toggleIsRead(isRead){
             if(!isRead){
