@@ -4,14 +4,18 @@ import keepService from '../../mr-keep/keep-services.js';
 
 export default {
     template: `
-        <section class="input-container">
-            <input  v-model="data.txt" v-if="keepTxt" type="text" placeholder="Please enter a text"/>
-            <input  v-model="data.imgUrl" v-if="keepImg" type="text" placeholder="Enter Image URL"/>
-            <input  v-model="data.videoUrl" v-if="keepVideo" type="text" placeholder="Enter Video URL"/>
-            <i @click="changeInputState('keepTxt')" class="fas fa-font"></i>
-            <i @click="changeInputState('keepImg')" class="fas fa-image"></i>
-            <i @click="changeInputState('keepVideo')" class="fas fa-video"></i>
-            <button @click="onAddKeep()">ADD ME</button>
+        <section class="input-container flex flex-center ">
+            <div class="keep-input-box flex flex-center align-c space-between">
+                <input  v-model="data.txt" v-if="keepTxt" type="text" placeholder="Please enter a text"/>
+                <input  v-model="data.imgUrl" v-if="keepImg" type="text" placeholder="Enter Image URL"/>
+                <input  v-model="data.videoUrl" v-if="keepVideo" type="text" placeholder="Enter Video URL"/>
+                <div class="input-icons ">
+                    <i @click="changeInputState('keepTxt')" class="fas fa-font"></i>
+                    <i @click="changeInputState('keepImg')" class="fas fa-image"></i>
+                    <i @click="changeInputState('keepVideo')" class="fas fa-video"></i>
+                </div>
+                <button @click="onAddKeep()">ADD ME</button>
+            </div>
         </section>
     `,
     data() {

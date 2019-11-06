@@ -8,14 +8,13 @@
     justify-content: flex-end;
 }
 
-.col{
+.col {
     flex-direction: column;
 }
 
 .row-reverse {
     flex-direction: row-reverse;
 }
-
 
 .align-c {
     align-items: center;
@@ -25,11 +24,12 @@
     align-items: center;
     justify-content: center;
 }
+
 .flex-center {
     justify-content: center;
 }
 
-.flex-wrap {
+.wrap {
     flex-wrap: wrap;
 }
 
@@ -40,7 +40,8 @@
 .space-between {
     justify-content: space-between;
 }
-.flex-space-around {
+
+.space-around {
     justify-content: space-around;
 }
 
@@ -66,4 +67,3 @@
 .hide {
     transform: scale(0);
 }
-
