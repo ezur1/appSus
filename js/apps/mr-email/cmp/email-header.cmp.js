@@ -2,7 +2,7 @@
 
 export default {
     template: `
-        <header class="email-app-container">
+        <header class="email-header-container">
             <h1>E-mail</h1>
             <input type="text" placeholder="Search Mail" />
             <select>
