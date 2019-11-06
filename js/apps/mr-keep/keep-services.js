@@ -22,6 +22,7 @@ function createKeep(type, data) {
 }
 
 
+
 function getKeeps() {
     return gKeeps;
 }
@@ -30,52 +31,25 @@ function findKeepById() {
 
 }
 
+
+
 let gKeeps = [{
         id: 'aaa',
         isPinned: false,
-        type: '',
-        data: {
+        type: 'keepTxt',
+        data: 'aaaaaaaaaaaaaa'
 
-        }
     },
     {
         id: 'bbb',
         isPinned: false,
-        type: '',
-        data: {
-
-        }
+        type: 'keepImg',
+        data: 'https://files.cults3d.com/uploaders/13358296/illustration-file/a2773a25-9b1e-4772-8ba1-9e8ef4d3baab/bob%20esponja%20_large.jpg'
     },
     {
         id: 'ccc',
         isPinned: false,
-        type: '',
-        data: {
-
-        }
-    },
-    {
-        id: 'ddd',
-        isPinned: false,
-        type: '',
-        data: {
-
-        }
-    },
-    {
-        id: 'fff',
-        isPinned: false,
-        type: '',
-        data: {
-
-        }
-    },
-    {
-        id: 'eee',
-        isPinned: false,
-        type: '',
-        data: {
-
-        }
+        type: 'keepTxt',
+        data: 'aaaaaaaaaaaaaa'
     }
 ]

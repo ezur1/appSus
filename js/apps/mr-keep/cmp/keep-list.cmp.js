@@ -2,18 +2,20 @@
 import keepService from '../../mr-keep/keep-services.js';
 import keepList from './add-keep.cmp.js'
 import keepPreview from './keep-preview.cmp.js'
+import keepTxt from './txt-keep.cmp.js';
+import keepImg from './img-keep.cmp.js';
 
 export default {
     template: `
         <section class="keep-list-container flex">
-            <keep-preview v-for="keep in keeps" :key=keep.id :keep="keep"></keep-preview>
+            <div v-for="keep in keeps" :key=keep.id :keep="keep">
+                <component :is="keep.type" :data="keep.data"></component>
+            </div>
         </section>
-
     `,
     data() {
         return {
             keeps: null
-
         };
     },
     created() {
@@ -22,6 +24,8 @@ export default {
     },
     components: {
         keepList,
-        keepPreview
+        keepPreview,
+        keepTxt,
+        keepImg
     }
 }
