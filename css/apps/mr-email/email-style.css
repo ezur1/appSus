@@ -1,0 +1,16 @@
+
+.unread{
+    font-weight: 700;
+}
+.preview{
+    color: grey;
+}
+
+.side-nav{
+  width: 10rem; 
+  border: 1px solid black; 
+  height: 100vh;
+}
+.mail-container{
+
+}
