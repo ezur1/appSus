@@ -1,125 +1,81 @@
 'use strict';
 
+import utilService from '../../main-service/util-service.js';
+
 const KEEPS_KEY = 'keepsKey';
 
 export default {
+    createKeep,
     getKeeps
 }
+
+function createKeep(type, data) {
+    console.log('data', data);
+    let newKeep = {
+        id: utilService.makeId(),
+        isPinned: false,
+        type,
+        data
+    };
+    console.log('newKeep', newKeep);
+    gKeeps.unshift(newKeep);
+}
+
 
 function getKeeps() {
     return gKeeps;
 }
 
-let gKeeps = [{
-        _id: 'aaa',
-        picture: '',
-        content: 'hi im ex txt keep',
-        type: 'noteImg',
-        video: '',
-        audio: '',
-        isDone: true,
-        isPin: false,
-        todos: {
-            todo1: '',
-            todo2: '',
-            todo3: ''
-        }
-    },
+function findKeepById() {
 
-    {
-        _id: 'bbb',
-        picture: '',
-        color: '',
-        content: 'hi im ex txt keep',
-        type: 'noteTxt',
-        video: '',
-        audio: '',
-        isDone: true,
-        isPin: false,
-        todos: {
-            todo1: '',
-            todo2: '',
-            todo3: ''
+}
+
+let gKeeps = [{
+        id: 'aaa',
+        isPinned: false,
+        type: '',
+        data: {
+
         }
     },
     {
-        _id: 'ccc',
-        picture: '',
-        color: '',
-        content: 'hi im ex txt keep',
-        type: 'noteTodo',
-        video: '',
-        audio: '',
-        isDone: false,
-        isPin: false,
-        todos: {
-            todo1: 'Finish Sprint',
-            todo2: 'drink beer',
-            todo3: 'start next project'
+        id: 'bbb',
+        isPinned: false,
+        type: '',
+        data: {
+
         }
     },
     {
-        _id: 'ddd',
-        picture: '',
-        color: '',
-        content: 'hi im ex txt keep',
-        type: 'noteImg',
-        video: '',
-        audio: '',
-        isDone: false,
-        isPin: false,
-        todos: {
-            todo1: '',
-            todo2: '',
-            todo3: ''
+        id: 'ccc',
+        isPinned: false,
+        type: '',
+        data: {
+
         }
     },
     {
-        _id: 'eee',
-        picture: '',
-        color: '',
-        content: 'hi im ex txt keep',
-        type: 'noteImg',
-        video: '',
-        audio: '',
-        isDone: false,
-        isPin: false,
-        todos: {
-            todo1: '',
-            todo2: '',
-            todo3: ''
+        id: 'ddd',
+        isPinned: false,
+        type: '',
+        data: {
+
         }
     },
     {
-        _id: 'fff',
-        picture: '',
-        color: '',
-        content: 'hi im ex txt keep',
-        type: 'noteTxt',
-        video: '',
-        audio: '',
-        isDone: false,
-        isPin: false,
-        todos: {
-            todo1: '',
-            todo2: '',
-            todo3: ''
+        id: 'fff',
+        isPinned: false,
+        type: '',
+        data: {
+
         }
     },
     {
-        _id: 'ggg',
-        picture: '',
-        color: '',
-        content: 'hi im ex txt keep',
-        type: 'noteVideo',
-        video: '',
-        audio: '',
-        isDone: false,
-        isPin: false,
-        todos: {
-            todo1: '',
-            todo2: '',
-            todo3: ''
+        id: 'eee',
+        isPinned: false,
+        type: '',
+        data: {
+
         }
     }
 ]

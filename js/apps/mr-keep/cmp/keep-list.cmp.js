@@ -5,7 +5,7 @@ import keepPreview from './keep-preview.cmp.js'
 
 export default {
     template: `
-        <section class=keep-list-container>
+        <section class="keep-list-container flex">
             <keep-preview v-for="keep in keeps" :key=keep.id :keep="keep"></keep-preview>
         </section>
 
