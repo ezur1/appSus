@@ -7,7 +7,7 @@ import keepImg from './img-keep.cmp.js';
 
 export default {
     template: `
-        <section class="keep-list-container flex">
+        <section class="keep-list-container flex wrap">
             <div v-for="keep in keeps" :key=keep.id :keep="keep">
                 <component :is="keep.type" :data="keep.data"></component>
             </div>
