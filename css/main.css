@@ -1,4 +1,5 @@
 @import '../css/common/helpers.css';
+@import '../css/apps/mr-email/email-style.css';
 
 * {
     box-sizing: border-box;
