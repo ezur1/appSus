@@ -21,7 +21,7 @@ export default {
     },
     created() {
         this.keeps = keepService.query();
-        console.log('keepsssssssssssssss', this.keeps);
+        console.log('keeps', this.keeps);
     },
     computed: {
         keepsToShow() {

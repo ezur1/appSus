@@ -19,8 +19,8 @@ export default {
         return {
             content: this.data,
             edit: false,
-            el: null,
-            placeholder: 'Please enter a text'
+            elInput: null,
+            placeholder: ''
         }
     },
     created() {
@@ -30,11 +30,10 @@ export default {
         deleteKeep(id) {
             keepService.deleteKeep(id);
         },
-        onEditKeep(keepId) {
-            console.log('keep id in keep-list', keepId);
+        onEditKeep() {
             this.edit = true;
-            this.el.value = this.data
-            this.placeholder = this.el.value;
+            this.elInput.value = this.data
+            this.placeholder = this.elInput.value;
 
         },
         onAddUpdatedKeep(keepId) {
@@ -45,6 +44,6 @@ export default {
 
     },
     mounted() {
-        this.el = this.$refs;
+        this.elInput = this.$refs;
     }
 }
