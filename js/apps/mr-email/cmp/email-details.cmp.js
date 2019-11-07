@@ -2,11 +2,14 @@
 import mailService from '../services/mail-service.js';
 
 export default {
+    name:'email-details',
     template: `
-        <section v-if="email" class="email-app-container">
-            <div>
-                <h1>{{email.subject}}</h1>
-                <button>delete</button>
+        <section v-if="email" class="full-size-email flex col">
+            <div class="flex space-between">
+                <h1>Subject: {{email.subject}}</h1>
+                <!-- <router-link @click="deleteEmail(email.id)" to="/email">delete</router-link> -->
+                <button @click="deleteEmail(email.id)">delete</button>
+
             </div>
             <p>{{email.sender}}</p>
             <p>{{email.body}}</p>
@@ -30,6 +33,10 @@ export default {
                 .then(email => {
                     this.email = email;
                 })
+        },
+        deleteEmail(emailId){
+            mailService.deleteEmail(emailId);  
+            this.$router.push('/email/');
         }
     },
     watch: {
@@ -37,6 +44,5 @@ export default {
             console.log('Route param: "id" changed');
             this.loadEmail;
         }
-    },
-
+    }
 }

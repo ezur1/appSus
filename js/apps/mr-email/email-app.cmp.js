@@ -10,7 +10,8 @@ export default {
             <email-header></email-header>
             <div class="mail-container flex">
                 <side-nav></side-nav>
-                <email-list></email-list>
+                <!-- <email-list></email-list> -->
+                <router-view/>
             </div>
         </section>
     `,

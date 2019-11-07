@@ -1,5 +1,6 @@
 export default {
-    makeId
+    makeId,
+    getTime
 };
 
 function makeId(length = 4) {
@@ -13,3 +14,19 @@ function makeId(length = 4) {
 
     return text;
 }
+
+function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
+  function getTime(){
+    var now = new Date();
+    var h = now.getHours();
+    var m = now.getMinutes();
+    m = checkTime(m);
+    var time = h+":"+m;
+    return time;
+  }
