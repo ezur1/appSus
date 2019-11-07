@@ -17,7 +17,7 @@
 /* =========header======== */
 
 .icon {
-    color: rgb(35, 131, 196);
+    color: rgb(240, 240, 240);
     font-size: 2rem;
 }
 
@@ -30,6 +30,7 @@
     padding: 0.5rem;
     border-radius: 1rem;
     border-style: none;
+    outline-width: 0;
 }
 
 .filter-container select {
@@ -71,6 +72,10 @@
     margin-top: 0.5rem;
 }
 
+.card-container:hover {
+    cursor: pointer;
+}
+
 
 /* ===========input /add keep============= */
 
@@ -86,22 +91,22 @@
     box-shadow: 12px 12px 5px rgb(27, 27, 27);
 }
 
-.input-container input {
-    padding: 0.3rem;
-    border-radius: 1rem;
-    border-style: none;
+.input-container:hover {
+    cursor: pointer;
 }
 
 .input-icons i {
-    margin: 0 0.2rem;
+    margin: 0 0.5rem;
 }
 
 
 /* =========add keep inputs======== */
 
-.keep-input-box button {
-    width: 2rem;
-    border-radius: 50%;
+.keep-input-box input {
+    width: 25rem;
+    margin: 1rem;
     padding: 0.5rem;
+    border-radius: 1rem;
     border-style: none;
+    outline-width: 0;
 }

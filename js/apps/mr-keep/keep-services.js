@@ -13,18 +13,19 @@ export default {
 
 
 function createKeep(type, data) {
-    console.log('data', data);
     let newKeep = {
         id: utilService.makeId(),
         isPinned: false,
         type,
         data
     };
-    console.log('newKeep', newKeep);
     gKeeps.unshift(newKeep);
 }
 
-function deleteKeep(idx) {
+function deleteKeep(keepId) {
+    console.log('keepId', keepId);
+    let idx = gKeeps.findIndex(keep => keep.id === keepId);
+    debugger;
     gKeeps.splice(idx, 1);
     storageService.store(KEEPS_KEY, gKeeps);
 }
@@ -94,5 +95,11 @@ let gKeeps = [{
         isPinned: false,
         type: 'keepTxt',
         data: 'note no_4'
+    },
+    {
+        id: 'nnn',
+        isPinned: false,
+        type: 'keepVideo',
+        data: 'cG8PXdTlDag'
     },
 ]
