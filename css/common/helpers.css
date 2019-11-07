@@ -8,6 +8,14 @@
     justify-content: flex-end;
 }
 
+.grow {
+    flex-grow: 1;
+}
+
+.align-end {
+    align-self: flex-end;
+}
+
 .col {
     flex-direction: column;
 }

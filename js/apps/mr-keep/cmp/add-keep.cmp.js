@@ -9,10 +9,12 @@ export default {
                 <input  v-model="data.txt" v-if="keepTxt" type="text" placeholder="Please enter a text"/>
                 <input  v-model="data.imgUrl" v-if="keepImg" type="text" placeholder="Enter Image URL"/>
                 <input  v-model="data.videoUrl" v-if="keepVideo" type="text" placeholder="Enter Video URL"/>
+                <input  v-model="data.todos" v-if="keepTodo" type="text" placeholder="Enter todos"/>
                 <div class="input-icons ">
                     <i @click="changeInputState('keepTxt')" class="fas fa-font"></i>
                     <i @click="changeInputState('keepImg')" class="fas fa-image"></i>
                     <i @click="changeInputState('keepVideo')" class="fas fa-video"></i>
+                    <i @click="changeInputState('keepTodo')" class="fas fa-list-ul"></i>
                 </div>
                 <button @click="onAddKeep()"><i class="fas fa-plus"></i></button>
             </div>
@@ -30,7 +32,7 @@ export default {
                 txt: '',
                 imgUrl: '',
                 videoUrl: '',
-                todos: []
+                todos: ''
             },
         };
     },

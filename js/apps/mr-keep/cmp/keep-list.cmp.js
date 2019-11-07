@@ -4,12 +4,14 @@ import keepList from './add-keep.cmp.js'
 import keepPreview from './keep-preview.cmp.js'
 import keepTxt from './txt-keep.cmp.js';
 import keepImg from './img-keep.cmp.js';
+import keepTodo from './todo-keep.cmp.js';
+import keepVideo from './video-keep.cmp.js';
 
 export default {
     template: `
         <section class="keep-list-container flex wrap">
             <div v-for="keep in keeps" :key=keep.id :keep="keep">
-                <component :is="keep.type" :data="keep.data"></component>
+                <component :is="keep.type" :data="keep.data" :id="keep.id"></component>
             </div>
         </section>
     `,
@@ -19,13 +21,15 @@ export default {
         };
     },
     created() {
-        this.keeps = keepService.getKeeps();
+        this.keeps = keepService.query();
         console.log('this.keeps: ', this.keeps);
     },
     components: {
         keepList,
         keepPreview,
         keepTxt,
-        keepImg
+        keepImg,
+        keepTodo,
+        keepVideo
     }
 }

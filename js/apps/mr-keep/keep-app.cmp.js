@@ -7,11 +7,8 @@ export default {
     template: `
         <section class="keep-app-container ">
             <keep-header></keep-header>
-            <!-- <div class="input-and-list flex col"> -->
-                <add-keep></add-keep>
-                <keep-list></keep-list>
-            <!-- </div> -->
-
+            <add-keep></add-keep>
+            <keep-list></keep-list>
         </section>
     `,
     components: {
