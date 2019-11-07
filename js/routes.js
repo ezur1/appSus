@@ -15,12 +15,19 @@ const mainRoutes = [{
     },
     {
         path: '/email',
-        component: emailApp
+        component: emailApp,
+        children: [
+            {
+                path: '/',
+                component: emailListCmp
+            },
+            {
+                path: ':id',
+                component: emailDetailsCmp
+            }
+
+        ]
     },
-    {
-        path: '/email/:id',
-        component: emailDetailsCmp
-    }
 ]
 
 const router = new VueRouter({

@@ -1,12 +1,20 @@
+'use strict';
+
+import mailService from '../services/mail-service.js';
+
 
 export default {
     props:["email"],
     template: `
-        <li  >
-            <div>
+        <li class="peek flex col">
+            <div class="flex space-between">
                 <h1>{{email.subject}}</h1>
-                <button>delete</button>
-                <router-link @click="linkClicked" :to="emailUrl">full-size</router-link>
+                <div>
+                <button @click="deleteEmail(email.id)">delete</button>
+                <!-- <router-link @click="linkClicked" :to="emailUrl">full-size</router-link> -->
+                <button @click="linkClicked(email.id)">fullSize</button>
+
+            </div>
             </div>
             <p>{{email.sender}}</p>
             <p>{{email.body}}</p>
@@ -15,6 +23,11 @@ export default {
     methods:{
         linkClicked(){
             this.email.isPreview = false;
+            this.$router.push(`/email/${this.email.id}`);
+        },
+        deleteEmail(emailId){
+            mailService.deleteEmail(emailId);
+            
         }
     },
     computed:{

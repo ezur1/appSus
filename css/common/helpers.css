@@ -19,6 +19,9 @@
 .col {
     flex-direction: column;
 }
+.end{
+    align-self: end;
+}
 
 .row-reverse {
     flex-direction: row-reverse;

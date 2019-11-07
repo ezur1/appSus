@@ -7,20 +7,95 @@
 }
 
 .side-nav{
-  width: 10rem; 
-  border: 1px solid black; 
+  width: 20rem; 
   height: 100vh;
+  position: relative;
 }
-.email-node{
-  height: 5rem;
-  border: 1px solid rgba(202, 202, 202, 0.644);
-  width: 80vw;
-  margin: 2rem 0;
+.side-nav-item{
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.compose-btn{
+font-size: 2rem;
+margin-top: 3rem;
+margin-bottom: 3rem;
+border: 1px solid rgba(202, 202, 202, 0.644);
+padding: 1rem;
+border-radius: 20px;
+cursor: pointer;
+}
+.fas{
+ margin-left: 2.5rem;
+ margin-right: 2rem;
 
 }
-.email-app-container{
+.far{
+  margin-left:1rem ;
+}
+.email-node{
+  box-shadow: 12px 12px 5px rgb(27, 27, 27);
+  background: #2c2c2c;
+  min-height: 5rem;
+  border: 1px solid rgba(202, 202, 202, 0.644);
+  width: 70vw;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+  border-radius: 10px;
+  justify-content: center;
+}
+.full-size-email{
   width: 100vw;
+  max-height: 80vh;
+  border: 1px solid rgba(202, 202, 202, 0.644);
+  border-radius: 10px;
+  margin: 3rem 6rem;
+  padding: 2rem 3rem;
 }
 .email-organize{
-  
+  width: 100%;
+  height: 3rem;
+  padding: 0 2rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(202, 202, 202, 0.644);
+  border-radius: 10px;
+  box-shadow: 12px 12px 5px rgb(27, 27, 27);
+
+}
+
+.emails-list{
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.email-info{
+  width: 100%;
+  padding:2rem 0;
+}
+
+.preview{
+  border-bottom: 1px solid rgba(202, 202, 202, 0.644);
+  padding-bottom:0;
+}
+.peek{
+  margin-top: 2rem;
+}
+
+
+.compose-modal{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 30rem;
+  width: 30rem;
+  border-top: 1px solid rgba(202, 202, 202, 0.644);
+  border-left: 1px solid rgba(202, 202, 202, 0.644);
+  border-radius: 10px;
+  padding: 1rem;
+  background: #2c2c2cec;
+}
+.compose-top{
+  height: 2rem;
+  width:100%;
+  border-bottom: 1px solid rgba(202, 202, 202, 0.644);
+
 }

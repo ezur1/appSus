@@ -14,7 +14,7 @@ body {
 
 header {
     height: 5rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(202, 202, 202, 0.644);
 }
 
 h1,
