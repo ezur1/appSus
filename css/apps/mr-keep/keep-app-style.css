@@ -1,20 +1,70 @@
+/* -----------------trying to give background to keep app only----------------- */
+
+
+/* .keep-header-container {
+    background: #202124;
+}
+
+.input-and-list {
+    background: #202124;
+}
+
+.keep-list-container {
+    background: #202124;
+} */
+
+
+/* =========header======== */
+
+.icon {
+    color: rgb(35, 131, 196);
+    font-size: 2rem;
+}
+
+.logo-txt {
+    margin: 0 1rem;
+}
+
+.filter-container input {
+    width: 400px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-style: none;
+}
+
+.filter-container select {
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.filter-container button {
+    padding: 0.4rem;
+    width: 4rem;
+    border-radius: 1rem;
+    border-style: none;
+}
+
+
+/* =========notes======== */
+
 .keep-preview-container {
+    color: rgb(238, 238, 238);
     font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1rem;
     font-size: 1.4rem;
     margin: 1rem;
-    padding: 1rem;
-    min-width: 12.5rem;
-    min-height: 9.3rem;
+    padding: 0.8rem;
+    min-width: 14rem;
+    min-height: 10rem;
     border: 1px solid rgba(202, 202, 202, 0.644);
-    background-color: rgb(88, 88, 88);
+    box-shadow: 12px 12px 5px rgb(27, 27, 27);
+    background: #2c2c2c;
     border-radius: 0.5rem;
 }
 
 .keep-preview-container img {
-    max-width: 12.5rem;
-    max-height: 12.5rem;
-    padding: 1rem;
-    border-radius: 10%;
+    max-width: 18rem;
+    max-height: 18rem;
 }
 
 .input-container {
@@ -23,12 +73,28 @@
     margin-bottom: 2rem;
     border-radius: 0.5rem;
     width: 50%;
-    height: 5rem;
-    /* padding: 2rem; */
-    background-color: rgb(68, 68, 68);
+    height: 3rem;
+    background: #363636;
     border: 1px solid rgba(202, 202, 202, 0.644);
+    box-shadow: 12px 12px 5px rgb(27, 27, 27);
+}
+
+.input-container input {
+    padding: 0.3rem;
+    border-radius: 1rem;
+    border-style: none;
 }
 
 .input-icons i {
     margin: 0 0.2rem;
+}
+
+
+/* =========add keep inputs======== */
+
+.keep-input-box button {
+    width: 2rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border-style: none;
 }
