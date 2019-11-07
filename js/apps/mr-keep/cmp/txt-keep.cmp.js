@@ -24,7 +24,7 @@ export default {
         }
     },
     created() {
-        console.log('keep id in txt cmp', this.id);
+
     },
     methods: {
         deleteKeep(id) {
@@ -39,7 +39,6 @@ export default {
         },
         onAddUpdatedKeep(keepId) {
             let newContent = this.$refs.editInput.value
-            console.log('newContent', newContent);
             keepService.saveUpdatedKeep(keepId, newContent)
             this.edit = false;
         }
@@ -47,6 +46,5 @@ export default {
     },
     mounted() {
         this.el = this.$refs;
-        console.log('this.el', this.el);
     }
 }

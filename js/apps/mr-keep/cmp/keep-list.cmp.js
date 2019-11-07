@@ -8,6 +8,7 @@ import keepTodo from './todo-keep.cmp.js';
 import keepVideo from './video-keep.cmp.js';
 
 export default {
+    props: ['keeps'],
     template: `
         <section class="keep-list-container flex wrap">
             <div v-for="keep in keeps" :key=keep.id :keep="keep">
@@ -17,19 +18,15 @@ export default {
     `,
     data() {
         return {
-            keeps: null
+            // keeps: null
         };
     },
     methods: {
-        onEditKeep(keepId) {
-            console.log('keep id in keep-list', keepId);
 
-        }
 
     },
     created() {
-        this.keeps = keepService.query();
-        console.log('this.keeps: ', this.keeps);
+        // this.keeps = keepService.query();
     },
     components: {
         keepList,
