@@ -11,6 +11,16 @@
   border: 1px solid black; 
   height: 100vh;
 }
-.mail-container{
+.email-node{
+  height: 5rem;
+  border: 1px solid rgba(202, 202, 202, 0.644);
+  width: 80vw;
+  margin: 2rem 0;
 
+}
+.email-app-container{
+  width: 100vw;
+}
+.email-organize{
+  
 }

@@ -5,7 +5,8 @@ import emailPeek from './email-peek.cmp.js';
 export default {
     props:['email','emails','idx'],
     template: `
-        <li :class="{unread:!email.isRead, preview:email.isPreview}"  @click="toggleIsRead(email.isRead),toggleIsPreview()">
+        <li class="email-node" :class="{unread:!email.isRead, preview:email.isPreview}"  @click="toggleIsRead(email.isRead),toggleIsPreview()">
+            
             <span class="sender-name">
                 {{email.sender}}
             </span>
