@@ -1,12 +1,13 @@
 'use strict';
 import mailService from '../services/mail-service.js';
 import emailPreview from '../cmp/email-preview.cmp.js';
-import {eventBus} from '../../../main-service/bus-service.js';
+import {
+    eventBus
+} from '../../../main-service/bus-service.js';
 
 export default {
     template: `
         <section class="email-app-container flex flex-center">
-
                 <ul class="emails-list flex col">
                     <li class="email-organize clean-list flex both-align-c space-between">
                         <span>From</span>
@@ -17,32 +18,48 @@ export default {
                 </ul>
         </section>
     `,
-    data(){
-        return{
-            emails:null,
-            currentEmailsState:1
+    data() {
+        return {
+            emails: null,
+            currentEmailsState: 1,
+            filterBy: {
+                subject: '',
+                read: 'all'
+            }
         }
     },
-    created(){
+    created() {
         console.log('Loading eMails');
-        this.emails=mailService.query();
+        this.emails = mailService.query();
         console.log(this.emails);
         eventBus.$on('changeState', state => {
             this.currentEmailsState = state;
         });
+        eventBus.$on('filtered', filterBy => {
+            this.filterBy = filterBy;
+        });
     },
-    components:{
+    components: {
         emailPreview
     },
-    computed:{
-        filterEmails(){
+    computed: {
+        filterEmails() {
+            let emailsToShow = this.emails;
             if (this.currentEmailsState === 1) {
-                return this.emails.filter(email => !email.isDeleted);   
+                emailsToShow = this.emails.filter(email => !email.isDeleted);
             } else if (this.currentEmailsState === 2) {
-                return this.emails.filter(email => email.isSent);
+                emailsToShow = this.emails.filter(email => email.isSent);
             } else if (this.currentEmailsState === 3) {
-                return this.emails.filter(email => email.isDeleted);
+                emailsToShow = this.emails.filter(email => email.isDeleted);
             }
+            if (this.filterBy.subject === '' && this.filterBy.read === 'all') return emailsToShow;
+            var regex = new RegExp(`${this.filterBy.subject}`, 'i');
+            // debugger
+            return emailsToShow.filter(email =>{
+                // email.subject.toLowerCase().includes(this.filterBy.subject.toLowerCase())
+                return regex.test(email.subject) === regex.test(this.filterBy.subject)
+            })
+
         }
     }
 
