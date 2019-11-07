@@ -14,7 +14,7 @@ export default {
                     <i @click="changeInputState('keepImg')" class="fas fa-image"></i>
                     <i @click="changeInputState('keepVideo')" class="fas fa-video"></i>
                 </div>
-                <button @click="onAddKeep()">ADD ME</button>
+                <button @click="onAddKeep()"><i class="fas fa-plus"></i></button>
             </div>
         </section>
     `,
