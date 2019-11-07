@@ -20,6 +20,13 @@ export default {
             keeps: null
         };
     },
+    methods: {
+        onEditKeep(keepId) {
+            console.log('keep id in keep-list', keepId);
+
+        }
+
+    },
     created() {
         this.keeps = keepService.query();
         console.log('this.keeps: ', this.keeps);

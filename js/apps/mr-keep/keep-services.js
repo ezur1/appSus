@@ -7,7 +7,8 @@ const KEEPS_KEY = 'keepsKey';
 export default {
     query,
     createKeep,
-    deleteKeep
+    deleteKeep,
+    saveUpdatedKeep
 }
 
 
@@ -27,6 +28,15 @@ function deleteKeep(idx) {
     gKeeps.splice(idx, 1);
     storageService.store(KEEPS_KEY, gKeeps);
 }
+
+function saveUpdatedKeep(keepId, content) {
+
+    console.log('keepId', keepId, 'content', content)
+    let keep = gKeeps.find(keep => keep.id === keepId);
+    keep.data = content;
+    storageService.store(KEEPS_KEY, gKeeps);
+}
+
 
 
 function query() {
