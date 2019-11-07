@@ -47,13 +47,13 @@
 
 /* =========notes======== */
 
-.keep-preview-container {
+.card-container {
     color: rgb(238, 238, 238);
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
     margin: 1rem;
-    padding: 0.8rem;
+    padding: 1rem;
     min-width: 14rem;
     min-height: 10rem;
     border: 1px solid rgba(202, 202, 202, 0.644);
@@ -62,10 +62,17 @@
     border-radius: 0.5rem;
 }
 
-.keep-preview-container img {
+.card-container img {
     max-width: 18rem;
     max-height: 18rem;
 }
+
+.card-container i {
+    margin-top: 0.5rem;
+}
+
+
+/* ===========input /add keep============= */
 
 .input-container {
     margin: 0 auto;
