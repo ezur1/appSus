@@ -5,7 +5,7 @@ export default {
     template: `
         <section class="card-container flex col" :class="cardColor">
         <iframe class="grow" :src='imgUrl'></iframe>
-        <div class="align-end">
+        <div class="flex align-end card-icons">
             <i @click="showColors()" class="fas fa-palette"></i>
             <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
             <color-picker class="color-picker animated bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>

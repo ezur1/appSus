@@ -3,13 +3,13 @@ import colorPicker from './color-picker.cmp.js'
 
 export default {
     template: `
-        <section class="card-container flex col " :class="cardColor">
+        <section class="card-container flex col align-end" :class="cardColor">
             <div class="todos grow">
                 <ul >
                     <li v-for="(todo, index) in todos" :key="index" :todo="todo">{{todo}}</li>
                 </ul>
             </div>
-            <div>
+            <div class="card-icons flex align-end align-c ">
                 <i @click="showColors()" class="fas fa-palette"></i>
                 <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
             </div>
