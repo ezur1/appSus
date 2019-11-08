@@ -95,6 +95,10 @@
     cursor: pointer;
 }
 
+.input-container i {
+    margin: 0;
+}
+
 .input-icons i {
     margin: 0 0.5rem;
 }
@@ -152,4 +156,9 @@
 
 .todos {
     margin: 1rem;
+}
+
+.card-icons i {
+    margin-left: 1rem;
+    margin-right: 0.2rem;
 }

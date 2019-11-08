@@ -5,7 +5,7 @@ export default {
     template: `
         <section class="card-container flex col" :class="cardColor">
         <img class="grow " :src="data" alt="">
-        <div class="align-end">
+        <div class="card-icons flex align-end">
             <i @click="showColors()" class="fas fa-palette"></i>
             <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
         </div>
