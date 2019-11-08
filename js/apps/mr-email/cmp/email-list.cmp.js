@@ -56,8 +56,13 @@ export default {
             var regex = new RegExp(`${this.filterBy.subject}`, 'i');
             // debugger
             return emailsToShow.filter(email =>{
-                // email.subject.toLowerCase().includes(this.filterBy.subject.toLowerCase())
-                return regex.test(email.subject) === regex.test(this.filterBy.subject)
+                if(this.filterBy.read === 'read')
+                return regex.test(email.subject) === regex.test(this.filterBy.subject)&&email.isRead
+                else if(this.filterBy.read === 'unread')
+                return regex.test(email.subject) === regex.test(this.filterBy.subject)&&!email.isRead
+                else return regex.test(email.subject) === regex.test(this.filterBy.subject)
+
+
             })
 
         }
