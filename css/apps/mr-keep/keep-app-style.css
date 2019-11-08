@@ -54,9 +54,9 @@
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
     margin: 1rem;
-    padding: 1rem;
-    min-width: 14rem;
-    min-height: 10rem;
+    padding: 0.5rem;
+    min-width: 15rem;
+    min-height: 12rem;
     border: 1px solid rgba(202, 202, 202, 0.644);
     box-shadow: 12px 12px 5px rgb(27, 27, 27);
     background: #2c2c2c;
@@ -64,8 +64,8 @@
 }
 
 .card-container img {
-    max-width: 18rem;
-    max-height: 18rem;
+    max-width: 14rem;
+    max-height: 11rem;
 }
 
 .card-container i {
@@ -109,4 +109,47 @@
     border-radius: 1rem;
     border-style: none;
     outline-width: 0;
+}
+
+
+/* ===sing card colors=== */
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0.2;
+    border: 1px solid white;
+}
+
+.colors-container {
+    margin-top: 1rem;
+}
+
+.setColor1 {
+    background-color: #3ae25f;
+}
+
+.setColor2 {
+    background-color: rgb(55, 113, 221);
+}
+
+.setColor3 {
+    background-color: rgb(231, 65, 53);
+}
+
+.setColor4 {
+    background-color: rgb(235, 235, 63);
+}
+
+.setColor5 {
+    background-color: rgb(196, 196, 196);
+}
+
+.setColor6 {
+    background-color: #2c2c2c;
+}
+
+.todos {
+    margin: 1rem;
 }

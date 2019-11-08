@@ -25,7 +25,6 @@ function createKeep(type, data) {
 function deleteKeep(keepId) {
     console.log('keepId', keepId);
     let idx = gKeeps.findIndex(keep => keep.id === keepId);
-    debugger;
     gKeeps.splice(idx, 1);
     storageService.store(KEEPS_KEY, gKeeps);
 }
@@ -54,52 +53,60 @@ function query() {
 
 
 let gKeeps = [{
-        id: 'aaa',
+        id: utilService.makeId(),
         isPinned: false,
         type: 'keepTxt',
         data: 'note no_1'
 
     },
     {
-        id: 'bbb',
+        id: utilService.makeId(),
         isPinned: false,
-        type: 'keepImg',
-        data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-take-the-risk-or-lose-the-chance-unknown-wisdom-quotes.jpg'
+        type: 'keepVideo',
+        data: 'Dk7h22mRYHQ'
     },
+
     {
-        id: 'ddd',
+        id: utilService.makeId(),
         isPinned: false,
         type: 'keepTxt',
         data: 'note no_2'
     },
     {
-        id: 'ggg',
+        id: utilService.makeId(),
         isPinned: false,
-        type: 'keepImg',
-        data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-impossible-is-for-the-unwilling-john-keats-wisdom-quotes.jpg'
+        type: 'keepTodo',
+        data: 'learn html,learn css,learn javascript'
     },
     {
-        id: 'sss',
+        id: utilService.makeId(),
         isPinned: false,
         type: 'keepTxt',
         data: 'note no_3'
     },
     {
-        id: 'www',
+        id: utilService.makeId(),
+        isPinned: false,
+        type: 'keepVideo',
+        data: 'WSKi8HfcxEk'
+    },
+    {
+        id: utilService.makeId(),
         isPinned: false,
         type: 'keepImg',
         data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-stay-foolish-to-stay-sane-maxime-lagace-wisdom-quotes.jpg'
     },
     {
-        id: 'ttt',
+        id: utilService.makeId(),
         isPinned: false,
         type: 'keepTxt',
         data: 'note no_4'
     },
     {
-        id: 'nnn',
+        id: utilService.makeId(),
         isPinned: false,
-        type: 'keepVideo',
-        data: 'cG8PXdTlDag'
+        type: 'keepImg',
+        data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-take-the-risk-or-lose-the-chance-unknown-wisdom-quotes.jpg'
     },
+
 ]

@@ -1,29 +1,32 @@
 import keepService from '../../mr-keep/keep-services.js';
-
+import colorPicker from './color-picker.cmp.js'
 
 export default {
     template: `
-        <section class="card-container flex col">
+        <section class="card-container flex col" :class="cardColor">
         <h1 v-if="!edit" class="grow">{{data}}</h1>
         <input class="grow" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
         <i @click="onAddUpdatedKeep(id)" v-if="edit" class="fas fa-plus"></i>
-        <div class="align-end">
+        <div class="card-icons align-end flex align-c ">
+            <i @click="showColors()" class="fas fa-palette"></i>
             <i @click="onEditKeep(id)"  class="far fa-edit"></i>
             <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
         </div>
-        
+        <color-picker class="color-picker animated bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
         </section>
     `,
-    props: ['data', "id"],
+    props: ['data', "id", "hover"],
     data() {
         return {
             content: this.data,
+            cardColor: '',
             edit: false,
             elInput: null,
-            placeholder: ''
+            placeholder: '',
+            show: false
         }
     },
-    created() {
+    computed: {
 
     },
     methods: {
@@ -40,10 +43,22 @@ export default {
             let newContent = this.$refs.editInput.value
             keepService.saveUpdatedKeep(keepId, newContent)
             this.edit = false;
+        },
+        setBackgroundColor(color) {
+            this.cardColor = color;
+            console.log('this.color', this.cardColor);
+        },
+        showColors() {
+            this.show = !this.show;
         }
+
+
 
     },
     mounted() {
         this.elInput = this.$refs;
+    },
+    components: {
+        colorPicker,
     }
 }

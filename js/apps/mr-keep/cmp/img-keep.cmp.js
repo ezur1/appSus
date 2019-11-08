@@ -1,19 +1,23 @@
 import keepService from '../../mr-keep/keep-services.js';
-
+import colorPicker from './color-picker.cmp.js'
 
 export default {
     template: `
-        <section class="card-container flex col">
+        <section class="card-container flex col" :class="cardColor">
         <img class="grow " :src="data" alt="">
         <div class="align-end">
-            <i class="far fa-edit"></i>
+            <i @click="showColors()" class="fas fa-palette"></i>
             <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
         </div>
+        <color-picker class="color-picker animated  bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
         </section>
     `,
     props: ['data', 'id'],
-    created() {
-        // console.log('this.data', this.data);
+    data() {
+        return {
+            cardColor: '',
+            show: false
+        }
     },
     computed: {
         imgUrl() {
@@ -21,10 +25,20 @@ export default {
         }
     },
     methods: {
-        deleteKeep() {
-            keepService.deleteKeep();
+        deleteKeep(id) {
+            keepService.deleteKeep(id);
+        },
+        setBackgroundColor(color) {
+            this.cardColor = color;
+            console.log('this.color', this.cardColor);
+        },
+        showColors() {
+            this.show = !this.show;
         }
 
+    },
+    components: {
+        colorPicker,
     }
 
 }

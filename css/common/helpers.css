@@ -19,7 +19,8 @@
 .col {
     flex-direction: column;
 }
-.end{
+
+.end {
     align-self: end;
 }
 
@@ -34,6 +35,10 @@
 .both-align-c {
     align-items: center;
     justify-content: center;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
 }
 
 .flex-center {
