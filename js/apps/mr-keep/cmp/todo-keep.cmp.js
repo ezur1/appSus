@@ -13,7 +13,7 @@ export default {
                 <i @click="showColors()" class="fas fa-palette"></i>
                 <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
             </div>
-            <color-picker class="color-picker animated  bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
+            <color-picker class="color-picker animated bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
         </section>
     `,
     props: ['data', 'id'],
