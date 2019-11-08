@@ -30,8 +30,8 @@ export default {
         // }
     },
     methods: {
-        deleteKeep() {
-            keepService.deleteKeep();
+        deleteKeep(id) {
+            keepService.deleteKeep(id);
         },
 
 

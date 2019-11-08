@@ -32,7 +32,7 @@ export default {
                 txt: '',
                 imgUrl: '',
                 videoUrl: '',
-                todos: ''
+                todos: null
             },
         };
     },

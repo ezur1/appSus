@@ -10,24 +10,20 @@ import keepVideo from './video-keep.cmp.js';
 export default {
     props: ['keeps'],
     template: `
-        <section class="keep-list-container flex wrap flex-center">
+        <section class="keep-list-container flex wrap flex-center ">
             <div v-for="keep in keeps" :key=keep.id >
-                <component :is="keep.type" :data="keep.data" :id="keep.id"></component>
+                <component  :is="keep.type" :data="keep.data" :id="keep.id"></component>
             </div>
         </section>
     `,
-    data() {
-        return {
-            // keeps: null
-        };
-    },
+    data() { return {} },
     methods: {
-
-
+        mouseOver() {
+            this.active = !this.active;
+            console.log('this.active', this.active);
+        }
     },
-    created() {
-        // this.keeps = keepService.query();
-    },
+    created() {},
     components: {
         keepList,
         keepPreview,
