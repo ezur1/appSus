@@ -8,7 +8,7 @@ export default {
     template: `
         <li class="peek flex col">
             <div class="flex space-between">
-                <h1>{{email.subject}}</h1>
+                <h1 class="peek-subject">{{email.subject}}</h1>
                 <div>
                 <button @click="deleteEmail(email.id)">delete</button>
                 <!-- <router-link @click="linkClicked" :to="emailUrl">full-size</router-link> -->
@@ -16,8 +16,8 @@ export default {
 
             </div>
             </div>
-            <p>{{email.sender}}</p>
-            <p>{{email.body}}</p>
+            <p class="peek-sender">{{email.sender}}</p>
+            <p class="peek-content">{{email.body}}</p>
         </li>
     `,
     methods:{

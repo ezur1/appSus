@@ -5,19 +5,23 @@ import emailPeek from './email-peek.cmp.js';
 export default {
     props: ['email', 'emails', 'idx'],
     template: `
-        <li v-if="email" class="email-node flex both-align-c space-between col" :class="{unread:!email.isRead}"  @click="toggleIsRead(email.isRead),toggleIsPreview()">
-            <div class="email-info flex space-between" :class="{preview:email.isPreview}">
-            <div class="sender-name ">
-                {{email.sender}}
+        <li v-if="email" class="email-node flex space-between col" :class="{unread:!email.isRead, 'peek-border':email.isPreview}"  @click="toggleIsRead(email.isRead),toggleIsPreview()">
+            <div class="email-info flex space-around col" :class="{preview:email.isPreview}">
+                <div class="sender top-prev">
+                    {{email.sender}}
+                </div>
+                <div v-if="!email.isPreview" class="subject">
+                    {{email.subject}}
+                </div>
+                <div v-if="!email.isPreview" class="content">
+                    {{email.body}}
+                </div>
+                <div class="recived-at top-prev">
+                    {{email.time}}
+                    <i v-if="!email.isRead" class="far fa-envelope"></i>
+                    <i v-if="email.isRead" class="far fa-envelope-open"></i>
+                </div>
             </div>
-            <div class="subject-content ">
-                {{email.subject}}
-            </div>
-            <div class="read-at">
-                {{email.time}}
-            </div>
-            </div>
-
             <div v-if="email.isPreview">
                 <email-peek :email="email" ></email-peek>
             </div>

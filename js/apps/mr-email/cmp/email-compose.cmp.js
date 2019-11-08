@@ -5,25 +5,30 @@ import mailService from '../services/mail-service.js';
 
 export default {
     template: `
-        <section class="compose-modal">
+        <section class="compose-modal flex col">
             <div class="compose-top flex space-between ">
-                <span>  New Messege </span>
-                <span @click="closeCompose" ><i class="fas fa-times"></i></span> 
+                <h1>  New Messege </h1>
+                <span @click="closeCompose" ><i class="fas fa-times compose-x"></i></span> 
             </div>
             <div class="flex col space-around">
-                <div class="flex col eMail-inputs">
-                    <div>
-                        Subject:
-                        <input v-model="newEmail.subject" type="text" placeholder="Enter Email Subject"/> 
+                <div class="flex col email-inputs">
+                    <div class="compose-subject flex">
+                        <h3>Subject:</h3>
+                        <input required v-model="newEmail.subject" type="text"/> 
                     </div>
-                    <div>
-                        Email Address:
-                        <input v-model="newEmail.sendto" type="text" placeholder="Enter Email Adress"/> 
+                    <div class="compose-email-address flex">
+                        <h3>To:</h3>
+                        <input required v-model="newEmail.sendto" type="text"/> 
                     </div>
                 </div>
                 <textarea v-model="newEmail.body" placeholder="Enter your email here:"></textarea>
             </div>
-            <button class="replayBtn" @click="sendEmail"><i class="fas fa-share"></i>Send</button>
+            <div class="replayBtn flex flex-end " @click="sendEmail">
+                <div class="replay">
+                <span>Send </span>
+                <i class="fab fa-telegram-plane"></i>
+                </div>
+            </div>
         </section>
     `,
     data(){

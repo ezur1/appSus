@@ -10,9 +10,9 @@ export default {
                 <ul class="side-nav-items flex col both-align-c clean-list">    
                     <li class="compose-btn" @click="showComposeModal">Compose <i class="far fa-edit"></i></li>
                     <div class="end">
-                    <li class="side-nav-item" @click="emitPickedEmails(1)"><i class="fas fa-inbox "></i>Mails</li>
-                    <li class="side-nav-item" @click="emitPickedEmails(2)"><i class="fas fa-share"></i>Sent</li>
-                    <li class="side-nav-item" @click="emitPickedEmails(3)"><i class="fas fa-trash"></i>Deleted</li>
+                    <li class="side-nav-item" @click="emitPickedEmails(1)"><i class="fas fa-inbox nav"></i>Mails</li>
+                    <li class="side-nav-item" @click="emitPickedEmails(2)"><i class="fas fa-share nav"></i>Sent</li>
+                    <li class="side-nav-item" @click="emitPickedEmails(3)"><i class="fas fa-trash nav"></i>Deleted</li>
                     </div>
                 </ul>
             </div>

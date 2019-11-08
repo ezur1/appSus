@@ -23,7 +23,7 @@ var gEmails = [{
     sendto: '',
     isSent: false,
     isFavorite: false,
-    isPreview: true,
+    isPreview: false,
     isDeleted: false
   },
   {
