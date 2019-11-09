@@ -4,7 +4,7 @@
 export default {
     template: `
         <header class="keep-header-container flex both-align-c space-between">
-            <div><i class="icon far fa-bell flex"><h1 class="logo-txt">Mr keep</h1></i></div>
+            <div clas="logo"><i class="logo icon far fa-bell flex"><h1 class="logo logo-txt">Mr keep</h1></i></div>
             <div class="filter-container">
                 <input type="text" placeholder="filter by text" v-model="filterBy.txt" @input="onFilterInput()" />
                 <!-- <button><i class="fas fa-search"></i></button> -->
