@@ -8,6 +8,7 @@ export default {
         <input class="grow" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
         <i @click="onAddUpdatedKeep(id)" v-if="edit" class="fas fa-plus"></i>
         <div class="card-icons align-end flex align-c ">
+            <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
             <i @click="showColors()" class="fas fa-palette"></i>
             <i @click="onEditKeep(id)"  class="far fa-edit"></i>
             <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
@@ -23,12 +24,11 @@ export default {
             edit: false,
             elInput: null,
             placeholder: '',
-            show: false
+            show: false,
+            pinnedColor: false
         }
     },
-    computed: {
-
-    },
+    computed: {},
     methods: {
         deleteKeep(id) {
             keepService.deleteKeep(id);
@@ -50,7 +50,11 @@ export default {
         },
         showColors() {
             this.show = !this.show;
-        }
+        },
+        pinKeep(id) {
+            this.pinnedColor = !this.pinnedColor;
+            keepService.setPin(id);
+        },
 
 
 

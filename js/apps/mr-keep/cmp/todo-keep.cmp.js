@@ -10,6 +10,7 @@ export default {
                 </ul>
             </div>
             <div class="card-icons flex align-end align-c ">
+                <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
                 <i @click="showColors()" class="fas fa-palette"></i>
                 <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
             </div>
@@ -20,7 +21,8 @@ export default {
     data() {
         return {
             cardColor: '',
-            show: false
+            show: false,
+            pinnedColor: null
         }
     },
     methods: {
@@ -33,6 +35,10 @@ export default {
         },
         showColors() {
             this.show = !this.show;
+        },
+        pinKeep(id) {
+            this.pinnedColor = !this.pinnedColor;
+            keepService.setPin(id);
         }
     },
     computed: {
