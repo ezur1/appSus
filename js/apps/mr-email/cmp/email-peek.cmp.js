@@ -9,31 +9,40 @@ export default {
         <li class="peek flex col">
             <div class=" flex space-between peek-subject">
                 <h1>{{email.subject}}</h1>
-                <div class="flex space-around">
-                    <div @click="deleteEmail(email.id)" class="hover-to-show-link">
-                        <span class="hover-to-show">delete</span>
-                        <i class="fas fa-trash nav"></i>
+                <div class="flex space-between actions">
+                    <div @click="deleteEmail(email.id)" class="hover-to-show-link action">
+                        <span class="hover-to-show">Delete</span>
+                        <i class="fas fa-trash icon-info"></i>
+                    </div>
+                    <div @click="markAsFavorite(email.id)" class="hover-to-show-link action">
+                        <span class="hover-to-show">Favorite</span>
+                        <i v-if="!email.isFavorite" class="far fa-star icon-info"></i>
+                        <i v-if="email.isFavorite" class="far fa-star icon-info favorite"></i>
+                    </div>
+                    <div @click="expand(email.id)" class="hover-to-show-link action">
+                        <span class="hover-to-show icon-info">Expand</span>
+                        <i class="fas fa-expand-arrows-alt "></i>
                     </div>
                 </div>
             </div>
             <div class="flex  space-between peek-sender">
                 <p>{{email.sender}}</p>
-                <div @click="linkClicked(email.id)" class="hover-to-show-link">
-                    <span class="hover-to-show">Expand</span>
-                    <i class="fas fa-expand-arrows-alt nav"></i>
-                </div>
+               
             </div>
             <p class="peek-content">{{email.body}}</p>
         </li>
     `,
     methods:{
-        linkClicked(){
+        expand(){
             this.email.isPreview = false;
             this.$router.push(`/email/${this.email.id}`);
         },
         deleteEmail(emailId){
             mailService.deleteEmail(emailId);
-            
+        },
+        markAsFavorite(emailId){
+            mailService.markAsFavorite(emailId);
+
         }
     },
     computed:{

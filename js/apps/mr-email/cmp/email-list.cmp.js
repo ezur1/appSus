@@ -50,11 +50,12 @@ export default {
             } else if (this.currentEmailsState === 2) {
                 emailsToShow = this.emails.filter(email => email.isSent);
             } else if (this.currentEmailsState === 3) {
-                emailsToShow = this.emails.filter(email => email.isDeleted);
+                emailsToShow = this.emails.filter(email => email.isFavorite);
+            } else if(this.currentEmailsState===4){
+                emailsToShow = this.emails.filter(email=> email.isDeleted);
             }
             if (this.filterBy.subject === '' && this.filterBy.read === 'all') return emailsToShow;
             var regex = new RegExp(`${this.filterBy.subject}`, 'i');
-            // debugger
             return emailsToShow.filter(email =>{
                 if(this.filterBy.read === 'read')
                 return regex.test(email.subject) === regex.test(this.filterBy.subject)&&email.isRead
