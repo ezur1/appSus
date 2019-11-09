@@ -26,11 +26,9 @@ header {
 
 .menu-icon {
     display: none;
-    margin: 0 auto;
     width: 95%;
     padding: 1.5rem;
     height: 7rem;
-    border-bottom: 1px solid rgba(202, 202, 202, 0.644);
 }
 
 header img {
@@ -51,7 +49,6 @@ p {
 footer {
     height: 8rem;
     bottom: 0;
-    /* text-align: center; */
 }
 
 ul {
@@ -60,8 +57,8 @@ ul {
 }
 
 .logo {
-    margin-left: 2rem;
     font-size: 30px;
+    margin-left: 1rem;
 }
 
 nav {
@@ -92,7 +89,8 @@ nav .nav-link:hover {
 
 .home-page-content h1 {
     font-size: 7rem;
-    color: rgb(255, 255, 255);
+    color: rgb(41, 41, 41);
+    margin-bottom: 13rem;
 }
 
 
@@ -137,8 +135,17 @@ a:visited.block:hover {
 /* -------smartphone-------- */
 
 @media (max-width: 768px) {
-    nav {
-        display: none;
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 10rem;
+        background: rgba(204, 204, 204, 0.8);
+        border-left: 1px solid rgba(153, 153, 153, 0.5);
+        transform: translate(100%, 0);
+        transition: transform .6s;
     }
     .menu-icon {
         display: block;
@@ -154,8 +161,6 @@ a:visited.block:hover {
         font-size: 3rem;
         color: rgb(255, 255, 255);
         display: inline;
-        /* top: 10rem;
-        left: 10rem; */
         text-align: center;
     }
 }

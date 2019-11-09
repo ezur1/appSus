@@ -29,6 +29,26 @@
 
 /* =========header======== */
 
+header {
+    width: 100%;
+}
+
+.icon {
+    margin-right: 2rem;
+}
+
+.nav-icons {
+    margin: 2rem;
+}
+
+.nav-icons i {
+    font-size: 3rem;
+}
+
+.displayNone {
+    display: none;
+}
+
 .icon {
     color: rgb(240, 240, 240);
     font-size: 2rem;
@@ -182,4 +202,23 @@
 .card-icons i {
     margin-left: 1rem;
     margin-right: 0.2rem;
+}
+
+
+/* -------smartphone-------- */
+
+@media (max-width: 768px) {
+    /* ------keep header----- */
+    .keep-header-container input {
+        width: 50%;
+    }
+    .keep-input-box {
+        width: 90%;
+    }
+    .keep-input-box input {
+        width: 80%;
+    }
+    .input-icons {
+        display: flex;
+    }
 }

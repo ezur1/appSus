@@ -9,7 +9,6 @@ export default {
             <main-header></main-header>
             <div class="home-page-content flex both-align-c">
                 <h1>welcome to appSus</h1>
-               <!-- <img class="home-page-pic" src="/img/medium-home-page-pic.jpg" alt=""> -->
             </div>
             <main-footer></main-footer>
 

@@ -4,7 +4,7 @@ import keepService from '../../mr-keep/keep-services.js';
 
 export default {
     template: `
-        <section class="input-container flex flex-center ">
+        <section class="input-container flex flex-center align-c">
             <div class="keep-input-box flex flex-center align-c space-between">
                 <div class="input-icons ">
                     <i @click="changeInputState('keepTxt')" class="fas fa-font"></i>
@@ -16,8 +16,8 @@ export default {
                 <input ref="input" v-model="data.imgUrl" v-if="keepImg" type="text" placeholder="Enter Image URL"/>
                 <input ref="input" v-model="data.videoUrl" v-if="keepVideo" type="text" placeholder="Enter Video URL"/>
                 <input ref="input" v-model="data.todos" v-if="keepTodo" type="text" placeholder="Enter todos"/>
-                <i @click="onAddKeep()" class="fas fa-plus"></i>
             </div>
+            <i @click="onAddKeep()" class="fas fa-plus"></i>
         </section>
     `,
     data() {
