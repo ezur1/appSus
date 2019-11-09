@@ -10,9 +10,10 @@ export default {
             <div class="flex space-between">
                 <h1 class="peek-subject">{{email.subject}}</h1>
                 <div>
-                <button @click="deleteEmail(email.id)">delete</button>
+                <div @click="deleteEmail(email.id)">
+                    <i class="fas fa-backspace"></i>delete</div>
                 <!-- <router-link @click="linkClicked" :to="emailUrl">full-size</router-link> -->
-                <button @click="linkClicked(email.id)">fullSize</button>
+                <div @click="linkClicked(email.id)">fullSize</div>
 
             </div>
             </div>
