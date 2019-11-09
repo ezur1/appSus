@@ -4,8 +4,11 @@ import {eventBus} from '../../../main-service/bus-service.js';
 
 export default {
     template: `
-    <section class="filter flex">
+    <section class="filter flex align-c space-around">
+        <div class="flex align-c">
+        <img src="img/search.png" class="search-icon " >
         <input @input="emitFilter" type="text" placeholder="Srearch.." v-model="filterBy.subject" />
+        </div>
         <select v-model="filterBy.read" @change="emitFilter">
             <option value="all" >All</option>
             <option value="read">Read</option>

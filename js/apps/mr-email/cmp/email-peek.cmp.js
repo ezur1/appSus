@@ -7,17 +7,22 @@ export default {
     props:["email"],
     template: `
         <li class="peek flex col">
-            <div class="flex space-between">
-                <h1 class="peek-subject">{{email.subject}}</h1>
-                <div>
-                <div @click="deleteEmail(email.id)">
-                    <i class="fas fa-backspace"></i>delete</div>
-                <!-- <router-link @click="linkClicked" :to="emailUrl">full-size</router-link> -->
-                <div @click="linkClicked(email.id)">fullSize</div>
-
+            <div class=" flex space-between peek-subject">
+                <h1>{{email.subject}}</h1>
+                <div class="flex space-around">
+                    <div @click="deleteEmail(email.id)" class="hover-to-show-link">
+                        <span class="hover-to-show">delete</span>
+                        <i class="fas fa-trash nav"></i>
+                    </div>
+                </div>
             </div>
+            <div class="flex  space-between peek-sender">
+                <p>{{email.sender}}</p>
+                <div @click="linkClicked(email.id)" class="hover-to-show-link">
+                    <span class="hover-to-show">Expand</span>
+                    <i class="fas fa-expand-arrows-alt nav"></i>
+                </div>
             </div>
-            <p class="peek-sender">{{email.sender}}</p>
             <p class="peek-content">{{email.body}}</p>
         </li>
     `,
