@@ -4,15 +4,23 @@ import mailService from '../services/mail-service.js';
 export default {
     name:'email-details',
     template: `
-        <section v-if="email" class="full-size-email flex col">
-            <div class="flex space-between">
+        <section v-if="email" class="expand-email flex col space-around">
+            <div class="flex space-between expand-subject">
                 <h1>Subject: {{email.subject}}</h1>
-                <!-- <router-link @click="deleteEmail(email.id)" to="/email">delete</router-link> -->
-                <button @click="deleteEmail(email.id)">delete</button>
-
+                <div class="flex space-around">
+                    <div @click="deleteEmail(email.id)" class="hover-to-show-link">
+                        <span class="hover-to-show">delete</span>
+                        <i class="fas fa-trash nav"></i>
+                    </div>
+                </div>
             </div>
-            <p>{{email.sender}}</p>
-            <p>{{email.body}}</p>
+            <div class="flex space-between expand-sender">
+                <h3>{{email.sender}}</h3>
+            </div>
+            <div class="flex space-between expand-content">
+                <p>{{email.body}}</p>
+            </div>
+
         </section>
     `,
     data() {
