@@ -8,7 +8,8 @@ export default {
     query,
     createKeep,
     deleteKeep,
-    saveUpdatedKeep
+    saveUpdatedKeep,
+    setPin
 }
 
 
@@ -37,6 +38,11 @@ function saveUpdatedKeep(keepId, content) {
     storageService.store(KEEPS_KEY, gKeeps);
 }
 
+function setPin(keepId) {
+    let keep = gKeeps.find(keep => keep.id === keepId);
+    keep.isPinned = !keep.isPinned;
+}
+
 
 
 function query() {
@@ -56,7 +62,7 @@ let gKeeps = [{
         id: utilService.makeId(),
         isPinned: false,
         type: 'keepTxt',
-        data: 'note no_1'
+        data: 'We use the v-on directive to listen to DOM events and run some JavaScript when they re triggered.'
 
     },
     {
@@ -70,7 +76,7 @@ let gKeeps = [{
         id: utilService.makeId(),
         isPinned: false,
         type: 'keepTxt',
-        data: 'note no_2'
+        data: 'The v-model directive makes two way binding between form input and our model'
     },
     {
         id: utilService.makeId(),
@@ -81,14 +87,14 @@ let gKeeps = [{
     {
         id: utilService.makeId(),
         isPinned: false,
-        type: 'keepTxt',
-        data: 'note no_3'
+        type: 'keepImg',
+        data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-take-the-risk-or-lose-the-chance-unknown-wisdom-quotes.jpg'
     },
     {
         id: utilService.makeId(),
         isPinned: false,
-        type: 'keepVideo',
-        data: 'WSKi8HfcxEk'
+        type: 'keepTxt',
+        data: 'Similar to binding normal properties on native dom elements, we can also use v bind for dynamically binding props of a component to data on the parent.'
     },
     {
         id: utilService.makeId(),
@@ -99,14 +105,7 @@ let gKeeps = [{
     {
         id: utilService.makeId(),
         isPinned: false,
-        type: 'keepTxt',
-        data: 'note no_4'
+        type: 'keepVideo',
+        data: 'WSKi8HfcxEk'
     },
-    {
-        id: utilService.makeId(),
-        isPinned: false,
-        type: 'keepImg',
-        data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-take-the-risk-or-lose-the-chance-unknown-wisdom-quotes.jpg'
-    },
-
 ]

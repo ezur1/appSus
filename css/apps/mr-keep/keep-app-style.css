@@ -14,6 +14,19 @@
 } */
 
 
+/*---fonts----*/
+
+@font-face {
+    font-family: Kaushan;
+    src: url('../../../fonts/KaushanScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: Playfair;
+    src: url('../../../fonts/PlayfairDisplay-Regular.ttf');
+}
+
+
 /* =========header======== */
 
 .icon {
@@ -50,17 +63,21 @@
 
 .card-container {
     color: rgb(238, 238, 238);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Playfair, serif;
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
     margin: 1rem;
-    padding: 0.5rem;
-    min-width: 15rem;
+    padding: 1rem;
+    max-width: 18rem;
     min-height: 12rem;
     border: 1px solid rgba(202, 202, 202, 0.644);
     box-shadow: 12px 12px 5px rgb(27, 27, 27);
     background: #2c2c2c;
     border-radius: 0.5rem;
+}
+
+.card-container h1 {
+    overflow-wrap: break-word;
 }
 
 .card-container img {
@@ -74,6 +91,10 @@
 
 .card-container:hover {
     cursor: pointer;
+}
+
+.pinColor {
+    color: red;
 }
 
 
@@ -131,23 +152,23 @@
 }
 
 .setColor1 {
-    background-color: #3ae25f;
+    background-color: #84DD63;
 }
 
 .setColor2 {
-    background-color: rgb(55, 113, 221);
+    background-color: #FF7F7F;
 }
 
 .setColor3 {
-    background-color: rgb(231, 65, 53);
+    background-color: #C69BFF;
 }
 
 .setColor4 {
-    background-color: rgb(235, 235, 63);
+    background-color: #F5D969;
 }
 
 .setColor5 {
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(100, 212, 184);
 }
 
 .setColor6 {

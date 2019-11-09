@@ -6,10 +6,11 @@ export default {
         <section class="card-container flex col" :class="cardColor">
         <iframe class="grow" :src='imgUrl'></iframe>
         <div class="flex align-end card-icons">
+            <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
             <i @click="showColors()" class="fas fa-palette"></i>
             <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
-            <color-picker class="color-picker animated bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
         </div>
+        <color-picker class="color-picker animated bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
         </section>
     `,
     props: ['data', 'id'],
@@ -17,7 +18,8 @@ export default {
         return {
             videoUrl: 'http://www.youtube.com/embed/',
             cardColor: '',
-            show: false
+            show: false,
+            pinnedColor: null
         }
     },
     created() {},
@@ -25,12 +27,6 @@ export default {
         imgUrl() {
             return this.videoUrl + this.data
         }
-        // replaceUrl() {
-        //     var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-        //     var match = this.videoUrl.match(regExp);
-        //     if (match && match[2].length == 11) this.videoUrl += match[2];
-        //     console.log('this.videoUrl', this.videoUrl);
-        // }
     },
     methods: {
         deleteKeep(id) {
@@ -42,6 +38,10 @@ export default {
         },
         showColors() {
             this.show = !this.show;
+        },
+        pinKeep(id) {
+            this.pinnedColor = !this.pinnedColor;
+            keepService.setPin(id);
         }
     },
     components: {
