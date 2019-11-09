@@ -5,9 +5,9 @@ import {eventBus} from '../../../main-service/bus-service.js';
 {/* <i class="far fa-edit"></i> */}
 export default {
     template: `
-        <nav class="side-nav">
-            <div> 
-                <ul class="side-nav-items flex col both-align-c clean-list">    
+        <nav class="side-nav flex">
+            <div class="flex"> 
+                <ul class="side-nav-items flex col both-align-c clean-list space-between">    
                     <li class="compose-btn flex space-around" @click="showComposeModal">
                         <span>Compose </span>
                         <img src="img/compose.png" class=" envelope" >
@@ -16,27 +16,27 @@ export default {
                     <div class="nav-selection end flex col ">
                         <div :class="{'picked-section':state.mails}" class="side-nav-item flex" @click="emitPickedEmails(1)">
                             <!-- <i class="fas fa-inbox nav"></i> -->
-                            <img src="img/mail.png" class="icon nav-icon" >
+                            <img src="img/mail.png" class=" nav-icon" >
 
-                            <span>Mails</span>
+                            <span class="hide-mobile">Mails</span>
                         </div>
                         <li :class="{'picked-section':state.sent}" class="side-nav-item flex" @click="emitPickedEmails(2)">
                             <!-- <i class="fas fa-share nav"></i> -->
-                            <img src="img/sent.png" class="icon nav-icon" >
+                            <img src="img/sent.png" class=" nav-icon" >
 
-                            <span>Sent</span>
+                            <span class="hide-mobile">Sent</span>
                         </li>
                         <li :class="{'picked-section':state.favorite}" class="side-nav-item flex" @click="emitPickedEmails(3)">
                             <!-- <i class="fas fa-trash nav"></i> -->
-                            <img src="img/favorite.png" class="icon nav-icon" >
+                            <img src="img/favorite.png" class=" nav-icon" >
 
-                            <span>Favorite</span>
+                            <span class="hide-mobile">Favorite</span>
                         </li>
                         <li :class="{'picked-section':state.deleted}" class="side-nav-item flex" @click="emitPickedEmails(4)">
                             <!-- <i class="fas fa-trash nav"></i> -->
-                            <img src="img/deleted.png" class="icon nav-icon" >
+                            <img src="img/deleted.png" class=" nav-icon" >
 
-                            <span>Deleted</span>
+                            <span class="hide-mobile">Deleted</span>
                         </li>
                     </div>
                 </ul>

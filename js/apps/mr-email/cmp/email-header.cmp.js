@@ -8,9 +8,26 @@ export default {
              <div class="filter-emails">
                 <email-filter></email-filter>
             </div>
-            <button>Apps</button>
+            <div class="flex space-around site-nav">
+                <i @click="openNav()" class="site-app-icon fas fa-th"></i>
+                <div :class="{'display-icons':iconShow}" class="nav-icons" >
+                    <router-link to="/"><i class="fas fa-home"></i></router-link> 
+                    <router-link to="/email"><i class="fas fa-envelope-square"></i></router-link>  
+                    <router-link to="/keep"><i class="far fa-sticky-note"></i></router-link>  
+                </div>  
+            </div>
         </header>
     `,
+    data() {
+        return {
+            iconShow: true,
+        }
+    },
+    methods: {
+        openNav() {
+            this.iconShow = !this.iconShow
+        }
+    },
     components:{
         emailFilter
     }

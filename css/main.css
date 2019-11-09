@@ -24,6 +24,9 @@ header {
     height: 8rem;
 }
 
+header img {
+    width: 100px;
+}
 .menu-icon {
     display: none;
     width: 95%;
@@ -31,9 +34,6 @@ header {
     height: 7rem;
 }
 
-header img {
-    width: 100px;
-}
 
 h1,
 h2,
@@ -129,9 +129,35 @@ nav .nav-link.block:hover,
 a:visited.block:hover {
     background: #eee;
 }
+.site-nav{
+    width:13rem;
+    position: relative;
+    flex-direction: row-reverse;
+    /* margin-left: 3rem; */
+}
 
+.nav-icons {
+    font-size: 1.8rem;
+    opacity: 0;
+    left: 0;
+
+}
+.display-icons{
+    transition: all .4s ease-in-out; 
+    opacity: 1;
+    align-self: flex-end;
+}
+.site-app-icon{
+    font-size: 2.65rem;
+}
 
 /* -------smartphone-------- */
+@media (max-width: 900px) {
+    header {
+        height: 5rem;
+    }
+}
+
 
 @media (max-width: 768px) {
     .nav-links {
@@ -162,6 +188,10 @@ a:visited.block:hover {
         display: inline;
         text-align: center;
     }
+    header img{
+        width: 70px;
+        /* border-radius: 50%; */
+    } 
 }
 
 

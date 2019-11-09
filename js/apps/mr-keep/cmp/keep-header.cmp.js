@@ -4,18 +4,23 @@
 export default {
     template: `
         <header class="keep-header-container flex both-align-c space-between">
-            <div clas="logo"><i class="logo icon far fa-bell flex"><h1 class="logo logo-txt">Mr keep</h1></i></div>
+            <div clas="logo">
+                <i class="logo icon far fa-bell flex">
+                    <h1 class="logo logo-txt">Mr keep</h1>
+                </i>
+            </div>
             <div class="filter-container">
                 <input type="text" placeholder="filter by text" v-model="filterBy.txt" @input="onFilterInput()" />
                 <!-- <button><i class="fas fa-search"></i></button> -->
             </div>
-            <div class="nav-icons">
-                <router-link v-if="iconShow" to="/"><i class="fas fa-home"></i></router-link> 
-                <router-link v-if="iconShow" to="/email"><i class="fas fa-envelope-square"></i></router-link>  
-                <router-link v-if="iconShow" to="/keep"><i class="far fa-sticky-note"></i></router-link>  
-            </div>  
-            <i @click="openNav()" class="icon fas fa-th" :class="{displayNone:isDisplay}"></i>
-            
+            <div class="flex site-nav">
+                <i @click="openNav()" class="site-app-icon fas fa-th"></i>
+                <div :class="{'display-icons':iconShow}" class="nav-icons" >
+                    <router-link to="/"><i class="fas fa-home"></i></router-link> 
+                    <router-link to="/email"><i class="fas fa-envelope-square"></i></router-link>  
+                    <router-link to="/keep"><i class="far fa-sticky-note"></i></router-link>  
+                </div>  
+            </div>
         </header>
     `,
     data() {
