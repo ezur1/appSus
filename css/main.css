@@ -13,13 +13,6 @@
     src: url('../../../fonts/PlayfairDisplay-Regular.ttf');
 }
 
-
-/* 
-html {
-    height: 100vh;
-    width: 100vw;
-} */
-
 body {
     margin: 0;
     padding: 0;
@@ -28,17 +21,16 @@ body {
 }
 
 header {
-    <<<<<<< HEAD height: 8rem;
+    height: 8rem;
 }
 
 .menu-icon {
     display: none;
-    =======margin: 0 auto;
+    margin: 0 auto;
     width: 95%;
     padding: 1.5rem;
     height: 7rem;
     border-bottom: 1px solid rgba(202, 202, 202, 0.644);
-    >>>>>>>ae2b1b5b3bf3644741a11edcb69984aa6d5f1dc9
 }
 
 header img {
