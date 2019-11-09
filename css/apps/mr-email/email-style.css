@@ -320,20 +320,39 @@ font-size: 1rem;
 
 }
 /* ---- Header ----*/
+.email-header-container{
+  padding: 0 4rem;
+}
 .filter{
-  width:23rem;
+  width:30vw;
 }
 .filter input{
   margin-left: .5rem;
   width: 100%;
-  height: 1.3rem;
+  height: 1.5rem;
   outline: none;
   background: none;
   border: none;
   border-bottom: 1px solid rgba(248, 210, 140, 0.37);
   font-size: 1.2rem;
-  color: rgba(248, 210, 140, 0.911)
+  color: rgba(248, 210, 140, 0.911);
+  line-height: 6rem;
 }
 .search-icon{
   width: 45px;
+}
+.filter-select{
+  background: none;
+  outline: none;
+  width: 5rem;
+  font-size: 1.1rem;
+  color: antiquewhite;
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  border: none;
+  border-bottom: 1px solid rgba(248, 210, 140, 0.37);
+  border-top: 1px solid rgba(248, 210, 140, 0.37);
+
+  background-image: url(...);
 }
