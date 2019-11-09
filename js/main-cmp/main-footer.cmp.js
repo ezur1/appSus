@@ -3,8 +3,8 @@
 
 export default {
     template: `
-        <footer>
-            <h1>footer</h1>
+        <footer class="flex both-align-c">
+            <h1 >&copy; Copyright 2019, appsus</h1>
         </footer>
         
         
