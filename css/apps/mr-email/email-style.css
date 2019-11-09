@@ -238,14 +238,11 @@ font-size: 1rem;
 .fa-envelope{
   color: rgba(255, 166, 0, 0.911);
 }
-.preview{
- 
-}
+
 .peek{
   margin-top: 1rem;
   margin-left: .3rem;
 }
-
 
 .hover-to-show { 
   opacity: 0;
@@ -257,14 +254,14 @@ font-size: 1rem;
   transition: all .2s ease-in-out;
 }
 
-
 /* ---- Expand ----*/
 .expand-email{
-  width: 100vw;
-  max-height: 80vh;
+  /* width: 100vw; */
+  /* max-height: 80vh; */
   border: 1px solid rgba(202, 202, 202, 0.644);
   border-radius: 10px;
-  margin: 3rem 6rem;
+  padding: 1.5rem 1.5rem 0 1rem;
+  /* margin: 3rem 6rem; */
   padding: 2rem 3rem;
 }
 .expand-subject{
