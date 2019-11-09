@@ -9,11 +9,9 @@ export default {
                     <li v-for="(todo, index) in todos" :key="index" :todo="todo">{{todo}}</li>
                 </ul>
             </div>
-            <input class="grow" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
             <div class="card-icons flex align-end align-c ">
                 <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
                 <i @click="showColors()" class="fas fa-palette"></i>
-                <i @click="onEditKeep(id)"  class="far fa-edit"></i>
                 <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
             </div>
             <color-picker class="color-picker animated bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
