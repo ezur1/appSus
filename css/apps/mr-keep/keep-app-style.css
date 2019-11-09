@@ -33,10 +33,6 @@ header {
     width: 100%;
 }
 
-.icon {
-    margin-right: 2rem;
-}
-
 .nav-icons {
     margin: 2rem;
 }
@@ -45,13 +41,10 @@ header {
     font-size: 3rem;
 }
 
-.displayNone {
-    display: none;
-}
-
 .icon {
     color: rgb(240, 240, 240);
     font-size: 2rem;
+    margin-right: 4rem;
 }
 
 .logo-txt {
@@ -209,16 +202,52 @@ header {
 
 @media (max-width: 768px) {
     /* ------keep header----- */
+    .icon {
+        margin: 2rem;
+    }
     .keep-header-container input {
-        width: 50%;
+        width: 12rem;
+        margin-left: 4rem;
+    }
+    .input-container {
+        width: 20rem;
     }
     .keep-input-box {
-        width: 90%;
+        width: 25rem;
     }
     .keep-input-box input {
-        width: 80%;
+        width: 8rem;
     }
     .input-icons {
         display: flex;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    /* ------keep header----- */
+    .icon {
+        margin: 2rem;
+    }
+    .keep-header-container input {
+        width: 12rem;
+        margin-left: 4rem;
+    }
+    .input-container {
+        width: 20rem;
+    }
+    .keep-input-box {
+        width: 25rem;
+    }
+    .keep-input-box input {
+        width: 8rem;
+    }
+    .input-icons {
+        display: flex;
+    }
+    .logo {
+        display: none;
     }
 }
