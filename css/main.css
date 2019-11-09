@@ -5,6 +5,21 @@
     box-sizing: border-box;
 }
 
+
+/* ==fonts== */
+
+@font-face {
+    font-family: Playfair;
+    src: url('../../../fonts/PlayfairDisplay-Regular.ttf');
+}
+
+
+/* 
+html {
+    height: 100vh;
+    width: 100vw;
+} */
+
 body {
     margin: 0;
     padding: 0;
@@ -13,8 +28,11 @@ body {
 }
 
 header {
-    height: 5rem;
-    border-bottom: 1px solid rgba(202, 202, 202, 0.644);
+    height: 8rem;
+}
+
+.menu-icon {
+    display: none;
 }
 
 h1,
@@ -23,14 +41,118 @@ h3 {
     margin: 0;
 }
 
-p{margin: 0}
+p {
+    margin: 0
+}
 
 footer {
+    height: 8rem;
     bottom: 0;
-    text-align: center;
+    /* text-align: center; */
 }
 
 ul {
     padding: 0;
     margin: 0;
+}
+
+.logo {
+    margin-left: 2rem;
+    font-size: 30px;
+}
+
+nav {
+    margin: 0;
+    margin-right: 2rem;
+}
+
+nav .nav-link {
+    margin: 1.5rem;
+    font-family: Playfair, serif;
+    color: whitesmoke;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+nav .nav-link:hover {
+    cursor: pointer;
+}
+
+.home-page-content {
+    height: 100vh;
+    background: url(../img/medium-home-page-pic.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home-page-content h1 {
+    font-size: 7rem;
+    color: rgb(255, 255, 255);
+}
+
+
+/* ----------underline animation ----------- */
+
+nav .nav-link,
+a:visited {
+    text-decoration: none;
+    position: relative;
+    color: rgb(238, 238, 238);
+}
+
+nav .nav-link:after,
+a:visited:after {
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: rgb(238, 238, 238);
+    transition: 0.5s;
+}
+
+nav .nav-link:hover:after,
+a:visited:hover:after {
+    width: 100%;
+}
+
+nav .nav-link.block,
+a:visited.block {
+    display: block;
+    padding: 0.5em;
+}
+
+nav .nav-link.block:hover,
+a:visited.block:hover {
+    background: #eee;
+}
+
+
+/* -------smartphone-------- */
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        margin-right: 2rem;
+    }
+    .menu-icon div {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(235, 235, 235);
+        margin: 6px 0;
+    }
+    .home-page-content h1 {
+        font-size: 3rem;
+        color: rgb(255, 255, 255);
+        display: inline;
+        /* top: 10rem;
+        left: 10rem; */
+        text-align: center;
+    }
 }
