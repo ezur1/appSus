@@ -5,7 +5,8 @@ export default {
     template: `
         <section class="card-container flex col" :class="cardColor">
         <h1 v-if="!edit" class="grow">{{data}}</h1>
-        <input class="grow" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
+        <h1 v-if="edit">{{txt}}</h1>
+        <input v-model="txt" class="grow" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
         <i @click="onAddUpdatedKeep(id)" v-if="edit" class="fas fa-plus"></i>
         <div class="card-icons align-end flex align-c ">
             <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
@@ -25,19 +26,19 @@ export default {
             elInput: null,
             placeholder: '',
             show: false,
-            pinnedColor: false
+            pinnedColor: false,
+            txt: ''
         }
     },
-    computed: {},
+    created() {
+        this.txt = this.data
+    },
     methods: {
         deleteKeep(id) {
             keepService.deleteKeep(id);
         },
         onEditKeep() {
             this.edit = true;
-            this.elInput.value = this.data
-            this.placeholder = this.elInput.value;
-
         },
         onAddUpdatedKeep(keepId) {
             let newContent = this.$refs.editInput.value
@@ -60,7 +61,7 @@ export default {
 
     },
     mounted() {
-        this.elInput = this.$refs;
+        // this.elInput = this.$refs;
     },
     components: {
         colorPicker,
