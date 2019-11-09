@@ -4,7 +4,7 @@ import {eventBus} from '../../../main-service/bus-service.js';
 
 export default {
     template: `
-    <section class="filter">
+    <section class="filter flex">
         <input @input="emitFilter" type="text" placeholder="Srearch.." v-model="filterBy.subject" />
         <select v-model="filterBy.read" @change="emitFilter">
             <option value="all" >All</option>

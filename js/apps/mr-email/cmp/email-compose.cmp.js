@@ -14,11 +14,11 @@ export default {
                 <div class="flex col email-inputs">
                     <div class="compose-subject flex">
                         <h3>Subject:</h3>
-                        <input required v-model="newEmail.subject" type="text"/> 
+                        <input v-model="newEmail.subject" type="text"/> 
                     </div>
                     <div class="compose-email-address flex">
                         <h3>To:</h3>
-                        <input required v-model="newEmail.sendto" type="text"/> 
+                        <input v-model="newEmail.sendto" type="text"/> 
                     </div>
                 </div>
                 <textarea v-model="newEmail.body" placeholder="Enter your email here:"></textarea>

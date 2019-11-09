@@ -28,11 +28,22 @@ body {
 }
 
 header {
-    height: 8rem;
+    <<<<<<< HEAD height: 8rem;
 }
 
 .menu-icon {
     display: none;
+    =======margin: 0 auto;
+    width: 95%;
+    padding: 1.5rem;
+    height: 7rem;
+    border-bottom: 1px solid rgba(202, 202, 202, 0.644);
+    >>>>>>>ae2b1b5b3bf3644741a11edcb69984aa6d5f1dc9
+}
+
+header img {
+    width: 100px;
+    padding: 10px 5px;
 }
 
 h1,
@@ -156,3 +167,12 @@ a:visited.block:hover {
         text-align: center;
     }
 }
+
+
+/* select {
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;      Remove default arrow 
+     background-image: url(...);   Add custom arrow 
+ } */

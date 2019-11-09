@@ -8,43 +8,50 @@
 }
 
 
-
+.icon{
+  width: 30px;
+}
 .side-nav{
   width: 20rem; 
   height: 100vh;
   position: relative;
+  padding: 0 1rem 0 4rem;;
+}
+.nav-selection{
+  width: 95%;
+  height: 100vh;
 }
 .side-nav-item{
   margin-bottom: 2rem;
   font-size: 1.4rem;
   cursor: pointer;
+  width: 100%;
+  line-height: 2.5rem;
+  transition: .3s ease-in-out;
 }
-.compose-btn{
-font-size: 2rem;
-margin-top: 3rem;
-margin-bottom: 3rem;
-border: 1px solid rgba(202, 202, 202, 0.644);
-padding: 1rem;
-border-radius: 20px;
-cursor: pointer;
+.picked-section{
+  border-bottom: 1px solid rgba(248, 210, 140, 0.603);
+  box-shadow: 0px 12px 15px -15px rgba(248, 210, 140, 0.87);
 }
-.fas.nav{
- margin-left: 2.5rem;
- margin-right: 2rem;
 
+
+.fas.nav{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  line-height: 2.5rem;
 }
 .far{
   margin-left:1rem ;
 }
 .email-node{
-  box-shadow: 12px 12px 5px rgb(27, 27, 27);
+  box-shadow: 12px 6px 5px rgb(27, 27, 27);
   background: #2c2c2c;
   min-height: 5rem;
   border: 1px solid rgba(202, 202, 202, 0.644);
   width: 70vw;
   margin-bottom: .7rem;
   padding: .7rem 1.3rem;
-  border-radius: 10px;
+  border-radius: 8px;
   position: relative;
   line-height: 1.3em;
   z-index:0;
@@ -85,16 +92,16 @@ cursor: pointer;
   width: 100%;
   height: 3rem;
   padding: 0 2rem;
-  margin: 1rem 0;
-  border: 1px solid rgba(202, 202, 202, 0.644);
+  margin: 1rem 0 2rem 0;
+  border-bottom: 1px solid rgba(248, 210, 140, 0.603);
+  box-shadow: 0px 12px 15px -15px rgba(248, 210, 140, 0.87);
   border-radius: 10px;
-  box-shadow: 12px 12px 5px rgb(27, 27, 27);
 
 }
 
 .emails-list{
   font-size: 1.115rem;
-  /* margin-top: 2rem; */
+  padding:1.5rem 1.5rem 0 1rem;
 }
 .email-info{
   width: 100%;
@@ -123,7 +130,13 @@ font-size: 1rem;
   margin-left: .3rem;
 }
 
-
+.compose-btn .far{
+color: white
+}
+.compose-btn:hover{
+  transition: .3s ease-in-out;
+  box-shadow: 0px 0px 49px -8px rgba(248, 210, 140, 0.87);
+}
 .compose-modal{
   position: fixed;
   bottom: 0;
@@ -197,10 +210,22 @@ font-size: 1rem;
   color: rgb(245, 232, 217);
   margin-bottom: 3rem;
 }
+.compose-btn{
+  font-size: 1.7rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(202, 202, 202, 0.555);
+  padding: .3rem .6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 0px 34px -8px rgba(248, 210, 140, 0.87);
+  line-height: 2rem;
+  }
+ 
 .replayBtn{
   padding-right: 1rem;
   padding-top:.5rem;
-  transform: .3s;
+  transition: .3s;
 }
 
 .replayBtn span{
@@ -219,3 +244,15 @@ font-size: 1rem;
   color: rgb(155, 231, 41);
 }
 
+
+.filter input{
+  margin-left: .5rem;
+  width: 100%;
+  height: 1.3rem;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(248, 210, 140, 0.37);
+  font-size: 1.2rem;
+  color: rgba(248, 210, 140, 0.911)
+}
