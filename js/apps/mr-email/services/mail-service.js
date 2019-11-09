@@ -7,7 +7,8 @@ export default {
   query,
   getEmailById,
   deleteEmail,
-  sendEmail
+  sendEmail,
+  markAsFavorite
 }
 
 
@@ -107,5 +108,12 @@ function sendEmail(newEmail) {
   console.log(newEmail);
   gEmails.unshift(newEmail);
   storageService.store(MAIL_KEY, gEmails);
+}
+
+function markAsFavorite(emailId){
+  const email = gEmails.find(email => email.id === emailId);
+  email.isFavorite = !email.isFavorite;
+  storageService.store(MAIL_KEY, gEmails)
+  return Promise.resolve();
 }
 // 
