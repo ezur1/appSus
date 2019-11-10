@@ -8,7 +8,7 @@ export default {
         <section class="home-page-container">
             <main-header></main-header>
             <div class="home-page-content flex both-align-c">
-                <h1>welcome to appSus</h1>
+                <h1>welcome to AppSus</h1>
             </div>
             <main-footer></main-footer>
 

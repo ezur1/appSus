@@ -33,13 +33,17 @@ header {
     width: 100%;
 }
 
-
-
-
 .icon {
-    color: rgb(240, 240, 240);
+    color: rgb(238, 238, 238);
     font-size: 2rem;
-    margin-right: 4rem;
+}
+
+.fa-th:before {
+    margin: 1rem;
+}
+
+.fa-th:hover {
+    cursor: pointer;
 }
 
 .logo-txt {
