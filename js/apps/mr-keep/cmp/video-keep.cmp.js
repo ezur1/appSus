@@ -21,7 +21,7 @@ export default {
     props: ['data', 'id'],
     data() {
         return {
-            videoUrl: 'http://www.youtube.com/embed/',
+            videoUrl: 'https://www.youtube.com/embed/',
             cardColor: '',
             isShow: false,
             pinnedColor: null,
