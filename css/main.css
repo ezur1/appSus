@@ -34,7 +34,11 @@
         width: 100px;
     }
     
-    .site-app-icon {
+    .main-app-icon {
+        display: none;
+    }
+    
+    .main-nav-icons {
         display: none;
     }
     
@@ -66,10 +70,6 @@
     nav {
         margin: 0;
         margin-right: 2rem;
-    }
-    
-    .nav-icons {
-        display: none;
     }
     
     nav .nav-link {
@@ -169,10 +169,11 @@
         nav {
             display: none;
         }
-        .site-app-icon {
+        .main-app-icon {
+            font-size: 2.65rem;
             display: inline;
         }
-        .nav-icons {
+        .main-nav-icons {
             display: inline;
         }
         .menu-icon div {
