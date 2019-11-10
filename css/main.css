@@ -68,6 +68,10 @@
         margin-right: 2rem;
     }
     
+    .nav-icons {
+        display: none;
+    }
+    
     nav .nav-link {
         margin: 1.5rem;
         color: whitesmoke;
@@ -166,6 +170,9 @@
             display: none;
         }
         .site-app-icon {
+            display: inline;
+        }
+        .nav-icons {
             display: inline;
         }
         .menu-icon div {
