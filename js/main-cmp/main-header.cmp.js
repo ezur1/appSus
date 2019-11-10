@@ -14,6 +14,7 @@ export default {
                 <router-link to="/" class="nav-link"> Home page</router-link> 
                 <router-link to="/keep" class="nav-link" >Keep app </router-link> 
                 <router-link to="/email" class="nav-link" >Email app</router-link> 
+                <router-link to="/books" class="nav-link" >Books app</router-link> 
             </nav>
             
         </header>
