@@ -488,7 +488,7 @@ font-size: 1rem;
     margin-bottom: 1.5rem;
   }
   .filter input {
-    width:7rem;
+    width:10.5rem;
   }
   .filter-mobile{
     display: inline;
@@ -505,7 +505,7 @@ font-size: 1rem;
   }
   .compose-btn{
     width: 11rem;
-    height: 3rem;
+    min-height: 3rem;
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
   }
