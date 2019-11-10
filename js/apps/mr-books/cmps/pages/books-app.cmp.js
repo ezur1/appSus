@@ -5,12 +5,15 @@ import filterBy from '../filter-by.cmp.js';
 import booksList from '../books-list.cmp.js';
 import bookDetails from './book-details.cmp.js';
 import bookPreview from '../book-preview.cmp.js';
+import booksHeader from '../header-books.cmp.js';
 
 export default {
     template: `
-    <section class="books-app container">
-            <filter-by @filtered="setFilter"></filter-by>
-            <books-list :books="booksToShow" @selected="selectBook"></books-list>
+
+    <section class="books-app">
+        <books-header></books-header>
+        <filter-by @filtered="setFilter"></filter-by>
+        <books-list :books="booksToShow" @selected="selectBook"></books-list>
     </section >
     `,
     data() {
@@ -54,6 +57,7 @@ export default {
         filterBy,
         booksList,
         bookDetails,
-        bookPreview
+        bookPreview,
+        booksHeader
     }
 }
