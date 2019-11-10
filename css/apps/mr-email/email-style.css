@@ -514,6 +514,7 @@ font-size: 1rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
   }
   .email-app-container{
     margin-top: 4rem;
@@ -522,7 +523,7 @@ font-size: 1rem;
     margin-bottom: 3rem;
   }
   .compose-modal textarea {
-    height: 15rem;
+    height: 10rem;
   }
   .replayBtn {
     padding-top: 1rem;
