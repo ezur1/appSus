@@ -24,6 +24,7 @@ export default {
             cardColor: '',
             isShow: false,
             pinnedColor: null,
+            placeholder: '',
             edit: false,
             txt: ''
         }
