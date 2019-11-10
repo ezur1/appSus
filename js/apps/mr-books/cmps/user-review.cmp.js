@@ -2,24 +2,26 @@
 
 export default{
     template:`
-           <form @submit.prevent="onSubmit" class="user-review flex col wrep">
-                <div class="rev-user-name">
-                    <label for="readerName">Your Name:</label>
-                    <input ref="readerName" type="text" v-model="review.name">
-                </div>  
-                <div>
-                <label for="ReadAt">Read At: </label>
-                <input type="date" v-model="review.readAt">
+           <form @submit.prevent="onSubmit" class="user-review flex  wrep">
+               <div class="user-rev-info flex col">
+                    <div class="rev-user-name flex col">
+                        <label for="readerName">Your Name:</label>
+                        <input ref="readerName" type="text" v-model="review.name">
+                    </div>  
+                    <div class="rev-date flex col">
+                        <label for="ReadAt">Read At: </label>
+                        <input type="date" v-model="review.readAt">
+                    </div>
+                    <div class="rev-rate flex">
+                        <label for="Rate">Rate:</label>
+                        <span class="star" @click.prevent="updateRate(i)" v-for="i in 5" :class="{marked: review.rate > i-1}" >☆</span>
+                    </div class="rev-rate flex col">
                 </div>
-                <div class="rev-rate">
-                    <label for="Rate">Rate:</label>
-                    <button @click.prevent="updateRate(i)" v-for="i in 5" :class="{marked: review.rate > i-1}" >☆</button>
-                </div>
-                <div>
-                <label for="Review">Your Book Review: </label>
-                <textarea style="width:300px; height:200px" v-model="review.text"></textarea>
-                <button type=submit>Leave Review</button>
-                </div>
+                <div class="review-section flex col">
+                    <label for="Review">Your Book Review: </label>
+                    <textarea v-model="review.text"></textarea>
+                    <i class="far fa-comment-dots"></i>
+                </div >
             </form>
     `,
     data(){

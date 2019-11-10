@@ -17,7 +17,7 @@ export default {
                             <email-filter></email-filter>
                         </div>
                     </li>
-                    <div class="nav-selection end flex col ">
+                    <div class="nav-selection end flex  ">
                         <li :class="{'picked-section':state.mails}" class="side-nav-item flex" @click="emitPickedEmails(1)">
                             <img src="img/mail.png" class=" nav-icon" >
                             <span class="hide-mobile">Mails</span>

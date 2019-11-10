@@ -5,17 +5,35 @@
     * {
         box-sizing: border-box;
     }
-    /* ==fonts== */
-    /*---fonts----*/
+    /*     
+        @font-face {
+            font-family: Playfair;
+            src: url('../../../fonts/PlayfairDisplay-Regular.ttf');
+        } */
+        /* @font-face {
+            font-family: Kaushan;
+            src: url('../../../fonts/KaushanScript-Regular.ttf');
+        } */
     
     @font-face {
-        font-family: 'Kaushan';
-        src: url('../../../fonts/KaushanScript-Regular.ttf');
+        font-family: McLor ;
+        src: url('../../../fonts/McLaren-Regular.ttf');
     }
-    
     @font-face {
-        font-family: 'Playfair';
-        src: url('../../../fonts/PlayfairDisplay-Regular.ttf');
+        font-family: Pts;
+        src: url('../../../fonts/PTSerif-Regular.ttf');
+    }
+    @font-face {
+        font-family: Raleway;
+        src: url('../../../fonts/Raleway-Regular.ttf');
+    }
+    @font-face {
+        font-family: LightRaleway;
+        src: url('../../../fonts/Raleway-LightItalic.ttf');
+    }
+    @font-face {
+        font-family: smBoldRaleway;
+        src: url('../../../fonts/Raleway-SemiBold.ttf');
     }
     
     body {

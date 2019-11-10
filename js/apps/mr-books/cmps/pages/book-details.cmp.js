@@ -9,20 +9,22 @@ export default {
 
         <section class="flex col wrep space-around" v-if="book">
             <header-books></header-books>
-            <section class="book-info-details flex">
-                    
-                    <img :src="this.book.thumbnail" />
-                <div class="book-details flex col">
-                    <div class = "book-title flex col" >
-                        <h1>{{book.title}}</h1>
-                        <p v-for="author in book.authors">Written by: {{author}} </p>
+            <section class="book-details-page flex space-around">
+                <div class="book-details flex align-c">
+                    <div class="img-info">
+                        <img :src="this.book.thumbnail" />
+                    </div>
+                    <div class = "book-info flex col" >
+                        <span class="title-det">{{book.title}}</span>
+                        <span class="author-det" v-for="author in book.authors">Written by: {{author}} </span>
+                        <span class="price-det" :class = "coloredPrice">Price: {{book.listPrice.amount}} {{showCurrency}}</span>
+
                     </div>
                     <div class="book-info flex col">
-                        <h4 :class = "coloredPrice">Price: {{book.listPrice.amount}} {{showCurrency}}</h4>
-                        <h3>{{book.subtitle}}</h3>
-                        <h4>Published At: {{book.publishedDate}} </h4>
-                        <h5>{{pageAmount}}</h5>
-                        <h5>{{bookAge}}</h5>
+                        <span class="subtitle-det">"{{book.subtitle}}"</span>
+                        <span>Published At: {{book.publishedDate}} </span>
+                        <span>{{pageAmount}}</span>
+                        <span>{{bookAge}}</span>
                     </div>  
                 </div>
             </section>

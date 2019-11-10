@@ -4,7 +4,12 @@ a{
     text-decoration: none;
     color: #145374;
 }
-
+.books-app{
+    font-family: Raleway;
+}
+.book-details-page{
+    font-family: Raleway;
+}
 
 .links{
     align-items: flex-end;
@@ -30,18 +35,18 @@ a{
 
 .book-title-img{
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
     font-style: italic;
     font-size: 2rem;
 }
-.book-info{
-    margin-top:20rem;
-}
+
 .user-review{
-    width:22rem;
-    /* margin-top: 20rem; */
+    max-width: 50rem;
+    border-top: 1.8px solid rgba(248, 210, 140, 0.6);
+    margin: 0 auto;
+    margin-top: 3rem;
     font-size: 1.5rem;
+    padding:1rem 2rem;
+
 }
 
 .books-list-container{
@@ -64,10 +69,8 @@ a{
 }
 .book img{
     width: 99.9%;
-    /* border-radius: 8px; */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    
 }
 .book:hover{
     transition: all .2s;
@@ -96,24 +99,119 @@ a{
 
 .book-details{
     margin:auto 0;
-    width: 50rem;
-    height: 30rem;
-    box-shadow: 12px 6px 5px rgb(27, 27, 27);
-    background: #2c2c2c;
-    border: .5px solid rgba(202, 202, 202, 0.644);
-    
     border-radius: 8px;
     position: relative;
+    align-items: end;
+}
+.book-details img{
+    border-radius: 5px;
+}
+.img-info{
+    padding-left: 1rem;
+    border-left: 1px solid rgba(248, 210, 140, 0.753);
+    height: 25rem;
 }
 
-.book-info-details img{
-    width: 21rem;
+.book-info img{
+    width: 22rem;
     height: 29.9rem;
     border-radius: 8px;
+    
 }
-.book-title h1{
+.book-info{
+    min-width: 22rem;
+    max-width: 22rem;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+.author-det{
+    margin-bottom: .5rem; 
+    color: #f1eee8;
+}
+.title-det{
     font-size: 2.7rem;
+    margin-bottom: 1rem;
+    font-family:smBoldRaleway;
 }
+.subtitle-det{
+    padding: 1rem 0 2rem 0;
+    color: rgb(250, 237, 212);
+    font-family:LightRaleway;
+    font-size: 2.2rem;
+}
+.price-det{
+    color: rgb(250, 237, 212);
+}
+.book-info:nth-child(3) {
+    border-left: 3px solid rgba(248, 210, 140, 0.753);
+    max-width:27rem;
+}
+.book-info:nth-child(2) {
+    border-left: 3px solid rgba(248, 210, 140, 0.753);
+    margin-left:1rem;
+}
+
+.rev-user-name, .review-section{
+    margin-top:1rem;
+    font-family:smBoldRaleway;
+    font-size: 2rem;
+}
+.rev-date,.rev-rate{
+    font-family: Raleway;
+    color: rgb(250, 237, 212);
+}
+.rev-date input, .rev-user-name input{
+    outline: none;
+    background: none;
+    border: none;
+    border-left: 3px solid rgba(248, 210, 140, 0.753);
+    padding-left:.5rem; 
+    margin-left:1rem; 
+    font-size: 1.5rem;
+    color: rgba(248, 210, 140, 0.911);
+    margin-bottom: 1rem;
+
+}
+.rev-user-name input{
+    width: 12rem;
+  
+}
+.rev-date input{
+    width: 13rem;
+    font-family: Raleway;
+    margin-top:.5rem; 
+}
+.review-section{
+    border-left: 3px solid rgba(248, 210, 140, 0.753);
+    padding-left: 2rem;
+}
+.review-section textarea{
+    width: 100%;
+    min-height: 1rem;
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(245, 232, 217);
+    overflow: auto;
+    resize: none;
+    border-left: 3px solid rgba(248, 210, 140, 0.911);
+    padding: 0rem .5rem 0 .5rem;
+    margin: .5rem 0 0 1rem;
+}
+.review-section {
+    position: relative;
+}
+.fa-comment-dots{
+    align-self: flex-end;
+    font-size: 2.3rem;
+    color: rgb(229, 194, 130);
+}
+.star{
+    margin-left: .3rem;
+    line-height: 1.8rem;
+}
+
 .home-page{
     height: 84vh;
 }

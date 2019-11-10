@@ -19,6 +19,9 @@
 header {
     width: 100%;
 }
+.keep-app-container{
+    font-family: McLor ;
+}
 
 .icon {
     color: rgb(238, 238, 238);
@@ -26,6 +29,8 @@ header {
 }
 
 .filter-container input {
+    font-family: McLor ;
+
     width: 16rem;
     padding: 0.5rem;
     border-style: none;
@@ -152,6 +157,8 @@ header {
 /* =========add keep inputs======== */
 
 .keep-input-box input {
+    font-family: McLor ;
+
     width: 25rem;
     margin: 1rem;
     padding: 0.5rem;
