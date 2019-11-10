@@ -11,16 +11,16 @@ export default {
                 <h1>{{email.subject}}</h1>
                 <div class="flex space-between actions">
                     <div @click="deleteEmail(email.id)" class="hover-to-show-link action">
-                        <span class="hover-to-show">Delete</span>
+                        <span class="hover-to-show hide-mobile">Delete</span>
                         <i class="fas fa-trash icon-info"></i>
                     </div>
                     <div @click="markAsFavorite(email.id)" class="hover-to-show-link action">
-                        <span class="hover-to-show">Favorite</span>
+                        <span class="hover-to-show hide-mobile">Favorite</span>
                         <i v-if="!email.isFavorite" class="far fa-star icon-info"></i>
                         <i v-if="email.isFavorite" class="far fa-star icon-info favorite"></i>
                     </div>
                     <div @click="expand(email.id)" class="hover-to-show-link action">
-                        <span class="hover-to-show icon-info">Expand</span>
+                        <span class="hover-to-show icon-info hide-mobile">Expand</span>
                         <i class="fas fa-expand-arrows-alt "></i>
                     </div>
                 </div>
