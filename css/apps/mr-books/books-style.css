@@ -39,8 +39,8 @@ a{
     margin-top:20rem;
 }
 .user-review{
-    width:17rem;
-    margin-top: 20rem;
+    width:22rem;
+    /* margin-top: 20rem; */
     font-size: 1.5rem;
 }
 
@@ -96,10 +96,24 @@ a{
 
 .book-details{
     margin:auto 0;
-    width: 100vw;
-    height:86.3vh;
+    width: 50rem;
+    height: 30rem;
+    box-shadow: 12px 6px 5px rgb(27, 27, 27);
+    background: #2c2c2c;
+    border: .5px solid rgba(202, 202, 202, 0.644);
+    
+    border-radius: 8px;
+    position: relative;
 }
 
+.book-info-details img{
+    width: 21rem;
+    height: 29.9rem;
+    border-radius: 8px;
+}
+.book-title h1{
+    font-size: 2.7rem;
+}
 .home-page{
     height: 84vh;
 }

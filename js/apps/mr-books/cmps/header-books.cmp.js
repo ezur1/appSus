@@ -3,7 +3,7 @@
 
 export default {
     template: `
-        <header class="flex align-c space-between">     
+        <header class="flex align-c space-between grow">     
             <img src="img/mail-logo.png">       
             <div class="flex site-nav">
                 <i @click="openNav()" class="site-app-icon fas fa-th"></i>

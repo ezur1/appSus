@@ -14,6 +14,7 @@ export default {
         <books-header></books-header>
         <filter-by @filtered="setFilter"></filter-by>
         <books-list :books="booksToShow" @selected="selectBook"></books-list>
+        <!-- <book-details></book-details> -->
     </section >
     `,
     data() {

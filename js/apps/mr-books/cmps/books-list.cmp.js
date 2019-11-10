@@ -6,7 +6,7 @@ export default{
     template:`
         <section class="books-list-container flex ">
                 <ul class="books-list flex wrap flex-center">
-                    <router-link v-for="(currBook, idx) in books" :to="'/booksApp/book/' + currBook.id" :key="currBook.id">
+                    <router-link v-for="(currBook, idx) in books" :to="'/books/' + currBook.id" :key="currBook.id">
                         <book-preview  :book="currBook" :bookIdx="idx" @click.native="selected(currBook.id)"></book-preview>
                     </router-link>
                 </ul>

@@ -2,24 +2,31 @@
 
 import {booksService} from '../../services/books-service.js';
 import userReview from '../user-review.cmp.js';
-// @reviewed = "addReview"
+import headerBooks from '../header-books.cmp.js';
+
 export default {
     template: `
-        <section class="book-details flex space-around" v-if="book">
-            <div class = "book-title-img" >
-                <h1>{{book.title}}</h1>
-                <h5 v-for="author in book.authors">Written by: {{author}} </h5>
-                <img :src="this.book.thumbnail" />
-            </div>
-            <div class="book-info flex col">
-                <h4 :class = "coloredPrice">Price: {{book.listPrice.amount}} {{showCurrency}}</h4>
-                <h3>{{book.subtitle}}</h3>
-                <h4>Published At: {{book.publishedDate}} </h4>
-                <h5>{{pageAmount}}</h5>
-                <h5>{{bookAge}}</h5>
-            </div>  
+
+        <section class="flex col wrep space-around" v-if="book">
+            <header-books></header-books>
+            <section class="book-info-details flex">
+                    
+                    <img :src="this.book.thumbnail" />
+                <div class="book-details flex col">
+                    <div class = "book-title flex col" >
+                        <h1>{{book.title}}</h1>
+                        <p v-for="author in book.authors">Written by: {{author}} </p>
+                    </div>
+                    <div class="book-info flex col">
+                        <h4 :class = "coloredPrice">Price: {{book.listPrice.amount}} {{showCurrency}}</h4>
+                        <h3>{{book.subtitle}}</h3>
+                        <h4>Published At: {{book.publishedDate}} </h4>
+                        <h5>{{pageAmount}}</h5>
+                        <h5>{{bookAge}}</h5>
+                    </div>  
+                </div>
+            </section>
             <user-review ></user-review>
-            <!-- <router-link :to="'/booksApp/book/' + nextBookId">NEXT BOOK &gt; </router-link> -->
         </section>
      `,
     data() {
@@ -65,6 +72,7 @@ export default {
 
     },
     created() {
+
         const bookId = this.$route.params.id;
         this.bookId=bookId;
         booksService.getBookById(bookId)
@@ -76,6 +84,7 @@ export default {
             })
     },
     components:{
-        userReview
+        userReview,
+        headerBooks
     }
 }

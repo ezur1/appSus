@@ -56,14 +56,9 @@ export default {
             keepService.saveUpdatedKeep(keepId, newContent)
             this.edit = false;
         },
-        onAddUpdatedKeep(keepId) {
-            let newContent = this.$refs.editInput.value
-            keepService.saveUpdatedKeep(keepId, newContent)
-            this.edit = false;
-        },
     },
     computed: {
-        todos() {
+        todos() {     
             return this.data.split(',')
         },
         changeBackgroundColor(color) {
