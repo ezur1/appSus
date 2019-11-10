@@ -11,10 +11,10 @@ export default {
     props: ['keeps'],
     template: `
         <section class="keep-list-container flex wrap flex-center ">
-            <div class="animated zoomInLeft" v-for="keep in pinnedKeeps" :key=keep.id >
+            <div class="animated bounceIn" v-for="keep in pinnedKeeps" :key=keep.id >
                 <component  :is="keep.type" :data="keep.data" :id="keep.id"></component>
             </div>
-            <div class="animated zoomInLeft" v-for="keep in unPinnedKeeps" :key=keep.id >
+            <div class="animated bounceIn" v-for="keep in unPinnedKeeps" :key=keep.id >
                 <component  :is="keep.type" :data="keep.data" :id="keep.id"></component>
             </div>
         </section>
@@ -28,9 +28,7 @@ export default {
     },
     computed: {
         pinnedKeeps() {
-            // let pinnedKeeps = this.keeps.filter(keep => keep.isPinned);
-            // let reversed = pinnedKeeps.reverse();
-            // return reversed;
+
             return this.keeps.filter(keep => keep.isPinned)
         },
         unPinnedKeeps() {
