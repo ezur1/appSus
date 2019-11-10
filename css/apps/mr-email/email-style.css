@@ -332,7 +332,7 @@ font-size: 1rem;
   outline: none;
   background: none;
   border: none;
-  border-bottom: 1px solid rgba(248, 210, 140, 0.37);
+  border-bottom: 1px solid rgba(248, 210, 140, 0.753);
   font-size: 1.2rem;
   color: rgba(248, 210, 140, 0.911);
   line-height: 6rem;
@@ -348,8 +348,8 @@ font-size: 1rem;
   font-size: 1.1rem;
   color: antiquewhite;
   border: none;
-  border-bottom: 1px solid rgba(248, 210, 140, 0.37);
-  border-top: 1px solid rgba(248, 210, 140, 0.37);
+  border-bottom: 1px solid rgba(248, 210, 140, 0.753);
+  border-top: 1px solid rgba(248, 210, 140, 0.753);
 }
 
 /* ---- media queary ----*/

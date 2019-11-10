@@ -4,17 +4,19 @@ import colorPicker from './color-picker.cmp.js'
 export default {
     template: `
         <section class="card-container flex col" :class="cardColor">
-        <h1 v-if="!edit" class="grow">{{data}}</h1>
-        <h1 v-if="edit">{{txt}}</h1>
-        <input v-model="txt" class="grow" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
-        <i @click="onAddUpdatedKeep(id)" v-if="edit" class="fas fa-plus"></i>
-        <div class="card-icons align-end flex align-c ">
-            <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
-            <i @click="showColors()" class="fas fa-palette"></i>
-            <i @click="onEditKeep(id)"  class="far fa-edit"></i>
-            <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
-        </div>
-        <color-picker class="color-picker animated bounce" v-show="isShow" @changeColor="setBackgroundColor"></color-picker>
+            <h1 v-if="!edit" class="grow">{{data}}</h1>
+            <!-- <h1 v-if="edit">{{txt}}</h1> -->
+            <div class="edit-text flex wrap">
+                <textarea v-model="txt" class="edit-txt-input" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
+                <i @click="onAddUpdatedKeep(id)" v-if="edit" class="fas fa-plus"></i>
+            </div>
+            <div class="card-icons align-end flex align-c ">
+                <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
+                <i @click="showColors()" class="fas fa-palette"></i>
+                <i @click="onEditKeep(id)"  class="far fa-edit"></i>
+                <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
+            </div>
+            <color-picker class="color-picker animated bounce" v-show="isShow" @changeColor="setBackgroundColor"></color-picker>
         </section>
     `,
     props: ['data', "id", "hover"],

@@ -5,19 +5,22 @@ import keepService from '../../mr-keep/keep-services.js';
 export default {
     template: `
         <section class="input-container flex flex-center align-c">
-            <div class="keep-input-box flex flex-center align-c space-between">
-                <div class="input-icons ">
+            <div class="keep-input-box flex flex-center align-c space-around">
+                <div class="input-icons flex">
                     <i @click="changeInputState('keepTxt')" class="fas fa-font"></i>
                     <i @click="changeInputState('keepImg')" class="fas fa-image"></i>
                     <i @click="changeInputState('keepVideo')" class="fas fa-video"></i>
                     <i @click="changeInputState('keepTodo')" class="fas fa-list-ul"></i>
                 </div>
-                <input ref="input"  v-model="data.txt" v-if="keepTxt" type="text" placeholder="Please enter a text"/>
-                <input ref="input" v-model="data.imgUrl" v-if="keepImg" type="text" placeholder="Enter Image URL"/>
-                <input ref="input" v-model="data.videoUrl" v-if="keepVideo" type="text" placeholder="Enter Video URL"/>
-                <input ref="input" v-model="data.todos" v-if="keepTodo" type="text" placeholder="Enter todos"/>
+                <div class="inputs flex">
+                    <input ref="input"  v-model="data.txt" v-if="keepTxt" type="text" placeholder="Please enter a text"/>
+                    <input ref="input" v-model="data.imgUrl" v-if="keepImg" type="text" placeholder="Enter Image URL"/>
+                    <input ref="input" v-model="data.videoUrl" v-if="keepVideo" type="text" placeholder="Enter Video URL"/>
+                    <input ref="input" v-model="data.todos" v-if="keepTodo" type="text" placeholder="Enter todos"/>
+                </div>  
+                <i @click="onAddKeep()" class="fas fa-notes-medical"></i>
+                <!-- <i  class="fas fa-plus"></i> -->
             </div>
-            <i @click="onAddKeep()" class="fas fa-plus"></i>
         </section>
     `,
     data() {

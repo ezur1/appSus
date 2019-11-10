@@ -17,12 +17,12 @@
 /*---fonts----*/
 
 @font-face {
-    font-family: Kaushan;
+    font-family: 'Kaushan';
     src: url('../../../fonts/KaushanScript-Regular.ttf');
 }
 
 @font-face {
-    font-family: Playfair;
+    font-family: 'Playfair';
     src: url('../../../fonts/PlayfairDisplay-Regular.ttf');
 }
 
@@ -38,24 +38,17 @@ header {
     font-size: 2rem;
 }
 
-.fa-th:before {
-    margin: 1rem;
-}
-
-.fa-th:hover {
-    cursor: pointer;
-}
-
-.logo-txt {
-    margin: 0 1rem;
-}
-
 .filter-container input {
-    width: 400px;
+    width: 16rem;
     padding: 0.5rem;
-    border-radius: 1rem;
     border-style: none;
-    outline-width: 0;
+    outline: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(248, 210, 140, 0.753);
+    font-size: 1.2rem;
+    color: rgba(248, 210, 140, 0.911);
+    height: 1.7rem;
 }
 
 .filter-container select {
@@ -69,18 +62,22 @@ header {
     border-radius: 1rem;
     border-style: none;
 }
+.lens-icon{
+    width: 40px;
+}
 
 
 /* =========notes======== */
 
 .card-container {
     color: rgb(238, 238, 238);
-    font-family: Playfair, serif;
-    letter-spacing: 0.1rem;
+    font-family: 'Playfair';
+    letter-spacing: 0.12rem;
     font-size: 1.4rem;
-    margin: 1rem;
+    margin: 2rem 2rem 0 0;
     padding: 1rem;
-    max-width: 18rem;
+    min-width: 17rem;
+    max-width: 17rem;
     min-height: 12rem;
     border: 1px solid rgba(202, 202, 202, 0.644);
     box-shadow: 12px 12px 5px rgb(27, 27, 27);
@@ -90,23 +87,23 @@ header {
 
 .card-container h1 {
     overflow-wrap: break-word;
+    margin-bottom: 1rem;
 }
 
 .card-container img {
-    max-width: 14rem;
-    max-height: 11rem;
+    max-width: 15rem;
+    max-height: 10rem;
+    border-radius: .35rem;
+    margin-bottom: 1rem;
 }
 
 .card-container i {
     margin-top: 0.5rem;
 }
 
-.card-container:hover {
-    cursor: pointer;
-}
 
 .pinColor {
-    color: red;
+    color: rgba(255, 166, 0, 0.911);
 }
 
 
@@ -117,11 +114,13 @@ header {
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 0.5rem;
-    width: 50%;
+    width: 42rem;
     height: 3rem;
-    background: #363636;
-    border: 1px solid rgba(202, 202, 202, 0.644);
-    box-shadow: 12px 12px 5px rgb(27, 27, 27);
+    background: none;
+    border: none;
+    border-bottom: 1px dotted rgba(248, 210, 140, 0.808);
+    box-shadow: 0px 17px 21px -17px rgba(248, 210, 140, 0.87);
+    font-size: 1.2rem;
 }
 
 .input-container:hover {
@@ -134,8 +133,27 @@ header {
 
 .input-icons i {
     margin: 0 0.5rem;
+    font-size: 1.5rem;
 }
 
+.fa-font:hover{
+    color:  #4386ff;
+}
+.fa-image:hover{
+    color: #ff7f7f;
+}
+.fa-video:hover{
+    color: #ffd400;;
+}
+.fa-list-ul:hover{
+    color: #a0e95d;;
+}
+.fa-notes-medical:hover{
+    color: rgba(255, 166, 0, 0.911);
+}
+.fa-notes-medical{
+    font-size: 1.7rem;
+}
 
 /* =========add keep inputs======== */
 
@@ -143,11 +161,25 @@ header {
     width: 25rem;
     margin: 1rem;
     padding: 0.5rem;
-    border-radius: 1rem;
-    border-style: none;
-    outline-width: 0;
+    outline: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(248, 210, 140, 0.753);
+    font-size: 1.2rem;
+    color: rgba(248, 210, 140, 0.911);
+    height: 1.6rem;
+    line-height: 2.8rem;
 }
-
+.edit-txt-input{
+    width:100%;
+    min-height: 7rem;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(238, 238, 238);
+    letter-spacing: 0.12rem;
+    font-size: 1rem;
+}
 
 /* ===sing card colors=== */
 
@@ -194,8 +226,14 @@ header {
 .card-icons i {
     margin-left: 1rem;
     margin-right: 0.2rem;
+    cursor: pointer;
 }
 
+.video-note{
+    border: none;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
 
 /* -------smartphone-------- */
 
@@ -246,7 +284,9 @@ header {
     .input-icons {
         display: flex;
     }
-    .logo {
-        display: none;
+    img.lens-icon {
+        width: 10px;
+        height: 10px;
     }
+   
 }

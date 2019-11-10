@@ -8,7 +8,7 @@ export default {
              <div class="filter-web">
                 <email-filter></email-filter>
             </div>
-            <div class="flex space-around site-nav">
+            <div class="flex site-nav">
                 <i @click="openNav()" class="site-app-icon fas fa-th"></i>
                 <div :class="{'display-icons':iconShow}" class="nav-icons" >
                     <router-link to="/"><i class="fas fa-home"></i></router-link> 

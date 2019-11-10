@@ -4,7 +4,7 @@ import colorPicker from './color-picker.cmp.js'
 export default {
     template: `
         <section class="card-container flex col" :class="cardColor">
-        <iframe class="grow" :src='imgUrl'></iframe>
+        <iframe class="video-note" :src='imgUrl'></iframe>
         <div class="flex align-end card-icons">
             <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
             <i @click="showColors()" class="fas fa-palette"></i>
