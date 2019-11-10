@@ -88,7 +88,7 @@ let gKeeps = [{
         id: utilService.makeId(),
         isPinned: false,
         type: 'keepImg',
-        data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-take-the-risk-or-lose-the-chance-unknown-wisdom-quotes.jpg'
+        data: 'http://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-take-the-risk-or-lose-the-chance-unknown-wisdom-quotes.jpg'
     },
     {
         id: utilService.makeId(),
@@ -100,7 +100,7 @@ let gKeeps = [{
         id: utilService.makeId(),
         isPinned: false,
         type: 'keepImg',
-        data: 'https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-stay-foolish-to-stay-sane-maxime-lagace-wisdom-quotes.jpg'
+        data: 'http://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/short-inspirational-quotes-stay-foolish-to-stay-sane-maxime-lagace-wisdom-quotes.jpg'
     },
     {
         id: utilService.makeId(),
