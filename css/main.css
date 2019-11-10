@@ -77,7 +77,7 @@
     
     .home-page-content {
         height: 100vh;
-        background: url(../img/medium-home-page-pic.jpg) no-repeat center center fixed;
+        background: url('../img/Medium-home-page-pic.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

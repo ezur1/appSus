@@ -14,7 +14,7 @@ export default {
             <i @click="onEditKeep(id)"  class="far fa-edit"></i>
             <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
         </div>
-        <color-picker class="color-picker animated bounce" v-show="isShow"   @changeColor="setBackgroundColor"></color-picker>
+        <color-picker class="color-picker animated bounce" v-show="isShow" @changeColor="setBackgroundColor"></color-picker>
         </section>
     `,
     props: ['data', "id", "hover"],
