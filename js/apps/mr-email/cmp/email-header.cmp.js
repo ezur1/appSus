@@ -5,7 +5,7 @@ export default {
     template: `
         <header class="email-header-container flex align-c space-between">     
             <img src="img/mail-logo.png">       
-             <div class="filter-emails">
+             <div class="filter-web">
                 <email-filter></email-filter>
             </div>
             <div class="flex space-around site-nav">

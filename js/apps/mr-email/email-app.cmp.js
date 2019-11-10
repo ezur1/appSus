@@ -6,7 +6,7 @@ import sideNav from './cmp/side-nav.cmp.js';
 
 export default {
     template: `
-        <section class="email-app-container">
+        <section class="email-app">
             <email-header></email-header>
             <div class="mail-container flex">
                 <side-nav></side-nav>
