@@ -14,7 +14,7 @@ export default {
                         <span class="hover-to-show hide-mobile">Delete</span>
                         <i class="fas fa-trash icon-info"></i>
                     </div>
-                    <div @click="markAsFavorite(email.id)" class="hover-to-show-link action">
+                    <div @click.stop="markAsFavorite(email.id)" class="hover-to-show-link action">
                         <span class="hover-to-show hide-mobile">Favorite</span>
                         <i v-if="!email.isFavorite" class="far fa-star icon-info"></i>
                         <i v-if="email.isFavorite" class="far fa-star icon-info favorite"></i>
