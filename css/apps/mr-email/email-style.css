@@ -499,7 +499,7 @@ font-size: 1rem;
   }
   .side-nav-items {
     flex-direction: column;
-    height: 8rem;
+    height: 10rem;
   }
   .filter-web{
     display: none;
