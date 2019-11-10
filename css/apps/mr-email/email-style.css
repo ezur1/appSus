@@ -492,6 +492,7 @@ font-size: 1rem;
   }
   .filter-mobile{
     display: inline;
+    margin-bottom: 1.5rem;
   }
   .hide-mobile{
     display: none;
@@ -515,7 +516,7 @@ font-size: 1rem;
     justify-content: space-between;
   }
   .email-app-container{
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
   .compose-subject {
     margin-bottom: 3rem;
@@ -528,5 +529,9 @@ font-size: 1rem;
   }
   .nav-selection {
     margin-left: .8rem;
+    /* margin-bottom: 1.5rem; */
   }
+  .actions {
+    width: 6rem;
+}
 }
