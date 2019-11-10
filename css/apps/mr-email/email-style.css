@@ -442,6 +442,9 @@ font-size: 1rem;
   .nav-selection{
     margin-left: 1rem;
   }
+  .email-header-container{
+    padding: 0 4rem;
+  }
 }
 @media (max-width: 730px) {
   .compose-modal {
@@ -478,6 +481,9 @@ font-size: 1rem;
 
 }
 @media (max-width: 580px) {
+  .email-header-container{
+    padding: 0 2rem;
+  }
   .side-nav{
     padding: 1rem;
     height: 22vh;

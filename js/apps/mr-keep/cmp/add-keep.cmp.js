@@ -5,6 +5,7 @@ import keepService from '../../mr-keep/keep-services.js';
 export default {
     template: `
         <section class="input-container flex flex-center align-c">
+            
             <div class="keep-input-box flex flex-center align-c space-around">
                 <div class="input-icons flex">
                     <i @click="changeInputState('keepTxt')" class="fas fa-font"></i>

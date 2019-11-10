@@ -28,6 +28,10 @@ const mainRoutes = [{
 
         ]
     },
+    {
+        path: '/books',
+        component: homePage
+    }
 ]
 
 const router = new VueRouter({

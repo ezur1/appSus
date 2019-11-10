@@ -61,7 +61,7 @@ header {
     color: rgb(238, 238, 238);
     letter-spacing: 0.12rem;
     font-size: 1.4rem;
-    margin: 2rem 2rem 0 0;
+    margin: 2rem 1rem 0 1rem;
     padding: 1rem;
     min-width: 17rem;
     max-width: 17rem;
@@ -99,9 +99,7 @@ header {
 /* ===========input /add keep============= */
 
 .input-container {
-    margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 1rem auto;
     border-radius: 0.5rem;
     width: 42rem;
     height: 3rem;
@@ -231,24 +229,26 @@ header {
     .icon {
         margin: 2rem;
     }
-    .keep-header-container input {
-        width: 12rem;
-        margin-left: 4rem;
-    }
+    /* .keep-header-container input {
+        width: 17rem;
+    } */
     .input-container {
-        width: 20rem;
+        width: 30rem;
     }
     .keep-input-box {
         width: 25rem;
     }
     .keep-input-box input {
-        width: 8rem;
+        width: 12rem;
     }
     .input-icons {
         display: flex;
     }
     .logo {
         display: none;
+    }
+    .keep-list-container{
+        padding: 0 2rem;
     }
 }
 
@@ -276,6 +276,24 @@ header {
     img.lens-icon {
         width: 10px;
         height: 10px;
+    } 
+}
+@media (max-width: 670px) {
+    .card-container {
+        min-width: 10rem;
+        max-width: 12rem;
+        min-height: 10rem;
+        font-size: 1.2rem;
     }
-   
+    .filter-container input{
+        width: 10rem;
+    }
+}
+@media (max-width: 550px) {
+    .card-container {
+        min-width: 8rem;
+        max-width: 10rem;
+        min-height: 10rem;
+    }
+    
 }

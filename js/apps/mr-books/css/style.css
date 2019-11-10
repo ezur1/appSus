@@ -1,0 +1,129 @@
+body{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-weight: 600;
+    background-color: #e8e8e8;
+    font-family: 'Montserrat', sans-serif;
+}
+li{list-style-type: none;}
+ul{padding: 0;}
+a{
+    text-decoration: none;
+    color: #145374;
+}
+
+footer{
+    width: 100vw;
+    bottom: 0;
+    height: 4vh;
+    background-color: #00334e;
+    justify-content: center;
+    align-items: center;
+    color: #5588a3;
+}
+
+.header{
+    width: 100vw;
+    height: 8vh;
+    background-color: #00334e;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+}
+.header h1{
+    font-family: 'Josefin Sans';
+    color: #e8e8e8;
+    font-size: 2.7rem;
+    margin: 0;
+}
+.links{
+    align-items: flex-end;
+    width:25%;
+    font-weight: 400;
+    font-family: 'Josefin Sans';
+    font-size: 1.6rem;
+    margin: 0;
+    padding-right: 5rem;
+}
+.links a{
+    color: #e8e8e8;
+    text-decoration: none;
+}
+.books-filter{
+    justify-content: center;
+    align-items: center;
+}
+
+.add-book-page{
+    height: 86.5vh;
+}
+
+.book-title-img{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+}
+.book-info{
+    margin-top:20rem;
+}
+.user-review{
+    width:17rem;
+    margin-top: 20rem;
+    font-size: 1.5rem;
+}
+
+.book{
+    padding: 2rem;
+}
+.book:hover{
+    box-shadow: #00334e 1px 1px 5px;
+}
+.green{color: green;}
+.red{color:red;}
+.flex{
+    display: flex;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.flex.col{
+    flex-direction: column;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+
+.book-details{
+    margin:auto 0;
+    width: 100vw;
+    height:86.3vh;
+}
+
+.home-page{
+    height: 84vh;
+}
+
+.container{
+    margin: 0 auto;
+    width:1160px;
+}
+
+.small-tnail{
+    width: 50px;
+    height: 80px;
+}
+.found-book{
+    margin: 0 auto;
+    width: 80vw;
+    height: 6rem;
+    border: #00334e 1px solid;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
