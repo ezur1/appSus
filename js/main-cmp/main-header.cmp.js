@@ -6,7 +6,7 @@ export default {
         <header class="flex space-between align-c">
             <h1 class="logo">appSus</h1>
             <div class="flex site-nav">
-                <i @click="openNav()" class="site-app-icon fas fa-th"></i>
+                <i @click="openNav()" class="main-app-icon fas fa-th"></i>
                 <div :class="{'display-icons':iconShow}" class="nav-icons" >
                     <router-link to="/"><i class="fas fa-home"></i></router-link> 
                     <router-link to="/email"><i class="fas fa-envelope-square"></i></router-link>  
