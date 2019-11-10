@@ -72,6 +72,7 @@
     font-size: 1.2rem;
     color: rgba(248, 210, 140, 0.911)
   }
+  
   .compose-modal textarea{
     min-height: 12rem;
     width: 100%;
@@ -336,6 +337,7 @@ font-size: 1rem;
   color: rgba(248, 210, 140, 0.911);
   line-height: 6rem;
 }
+
 .search-icon{
   width: 45px;
 }
@@ -494,10 +496,10 @@ font-size: 1rem;
   }
   .filter input {
     width:10.5rem;
+    line-height: 1;
   }
   .filter-mobile{
     display: block;
-    /* margin-bottom: 1.5rem; */
   }
   .hide-mobile{
     display: none;
@@ -540,5 +542,14 @@ font-size: 1rem;
   }
   .actions {
     width: 6rem;
-}
+  }
+  .expand-email{
+    width: 95%;
+    margin-left: .5rem;
+    padding: 1rem;
+  }
+  .subj-top-expand {
+    flex-direction: column-reverse;
+    
+  }
 }

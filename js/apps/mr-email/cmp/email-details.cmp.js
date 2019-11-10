@@ -5,15 +5,15 @@ export default {
     name:'email-details',
     template: `
         <section v-if="email" class="expand-email flex col">
-            <div class="flex space-between expand-subject">
+            <div class="subj-top-expand flex space-between expand-subject">
                 <h1>Subject: {{email.subject}}</h1>
                 <div class="flex space-between actions">
                     <div @click="deleteEmail(email.id)" class="hover-to-show-link action">
-                        <span class="hover-to-show">Delete</span>
+                        <span class="hover-to-show hide-mobile">Delete</span>
                         <i class="fas fa-trash"></i>
                     </div>
                     <div @click="markAsFavorite(email.id)" class="hover-to-show-link action">
-                        <span class="hover-to-show">Favorite</span>
+                        <span class="hover-to-show hide-mobile">Favorite</span>
                         <i v-if="!email.isFavorite" class="far fa-star icon-info"></i>
                         <i v-if="email.isFavorite" class="far fa-star icon-info favorite"></i>
                     </div>
