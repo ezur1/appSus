@@ -504,7 +504,7 @@ font-size: 1rem;
   }
   .side-nav-items {
     flex-direction: column;
-    height: 8rem;
+    height: 11rem;
   }
   .filter-web{
     display: none;
@@ -536,7 +536,7 @@ font-size: 1rem;
   }
   .nav-selection {
     margin-left: .8rem;
-    /* margin-top: 2rem; */
+    height: 4rem;
   }
   .actions {
     width: 6rem;
