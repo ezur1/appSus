@@ -5,8 +5,10 @@ export default {
     template: `
         <li class="book" >
             <img :src="imgSrc" />
-            <h2>{{book.title}}</h2>
-            <h4>Price:{{book.listPrice.amount}}{{showCurrency}} </h4>
+            <div class="book-prevew-info">
+                <h3>{{book.title}}</h3>
+                <span>Price:{{book.listPrice.amount}}{{showCurrency}} </span>
+            </div>
         </li>
     `,
     data() {
