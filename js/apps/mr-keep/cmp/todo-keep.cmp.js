@@ -4,14 +4,19 @@ import colorPicker from './color-picker.cmp.js'
 export default {
     template: `
         <section class="card-container flex col align-end" :class="cardColor">
-            <div class="todos grow">
-                <ul >
-                    <li v-for="(todo, index) in todos" :key="index" :todo="todo">{{todo}}</li>
+            <div class="todos">
+                <ul>
+                    <h1 class="grow" v-for="(todo, index) in todos" :key="index" :todo="todo"><i class="fas fa-asterisk"></i> {{todo}}</h1>
                 </ul>
+            </div>
+            <div class="edit-text flex wrap">
+                <textarea v-model="txt" class="edit-txt-input" ref="editInput" v-if="edit" type="text" :placeholder="placeholder"/>
+                <i @click="onAddUpdatedKeep(id)" v-if="edit" class="fas fa-plus"></i>
             </div>
             <div class="card-icons flex align-end align-c ">
                 <i @click="pinKeep(id)" class="fas fa-thumbtack" :class="{pinColor:pinnedColor}"></i>
                 <i @click="showColors()" class="fas fa-palette"></i>
+                <i @click="onEditKeep()"  class="far fa-edit"></i>
                 <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
             </div>
             <color-picker class="color-picker animated bounce" v-show="isShow"  @changeColor="setBackgroundColor"></color-picker>
@@ -22,7 +27,9 @@ export default {
         return {
             cardColor: '',
             isShow: false,
-            pinnedColor: null
+            pinnedColor: null,
+            txt: '',
+            edit: false
         }
     },
     methods: {
@@ -44,6 +51,11 @@ export default {
         },
         onEditKeep() {
             this.edit = true;
+        },
+        onAddUpdatedKeep(keepId) {
+            let newContent = this.$refs.editInput.value
+            keepService.saveUpdatedKeep(keepId, newContent)
+            this.edit = false;
         },
         onAddUpdatedKeep(keepId) {
             let newContent = this.$refs.editInput.value
