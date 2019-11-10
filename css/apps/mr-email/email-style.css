@@ -480,7 +480,7 @@ font-size: 1rem;
   .compose-modal {
     left: 1rem;
     width: 21.5rem;
-    height: 39rem;
+    height: 40rem;
   }
   .side-nav-item {
     width: 6rem;
@@ -517,7 +517,6 @@ font-size: 1rem;
   }
   .email-app-container{
     margin-top: 3rem;
-    margin-left: 1rem;
   }
   .compose-subject {
     margin-bottom: 3rem;
@@ -527,5 +526,8 @@ font-size: 1rem;
   }
   .replayBtn {
     padding-top: 1rem;
-}
+  }
+  .nav-selection {
+    margin-left: .8rem;
+  }
 }
