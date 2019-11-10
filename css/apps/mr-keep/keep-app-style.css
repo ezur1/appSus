@@ -14,7 +14,6 @@
 } */
 
 
-
 /* =========header======== */
 
 header {
@@ -50,7 +49,8 @@ header {
     border-radius: 1rem;
     border-style: none;
 }
-.lens-icon{
+
+.lens-icon {
     width: 40px;
 }
 
@@ -67,8 +67,8 @@ header {
     max-width: 17rem;
     min-height: 12rem;
     border: 1px solid rgba(202, 202, 202, 0.5);
-    border-bottom: 1.5px dotted rgba(248, 210, 140, 0.9);
-    border-top: 1.5px dotted rgba(248, 210, 140, 0.6);
+    border-bottom: 1.5px solid rgba(248, 210, 140, 0.9);
+    border-top: 1.5px solid rgba(248, 210, 140, 0.6);
     box-shadow: 12px 12px 5px rgb(27, 27, 27);
     background: #2c2c2c;
     border-radius: 0.5rem;
@@ -89,7 +89,6 @@ header {
 .card-container i {
     margin-top: 0.5rem;
 }
-
 
 .pinColor {
     color: rgba(255, 166, 0, 0.911);
@@ -123,24 +122,32 @@ header {
     font-size: 1.5rem;
 }
 
-.fa-font:hover{
-    color:  #4386ff;
+.fa-font:hover {
+    color: #4386ff;
 }
-.fa-image:hover{
+
+.fa-image:hover {
     color: #ff7f7f;
 }
-.fa-video:hover{
-    color: #ffd400;;
+
+.fa-video:hover {
+    color: #ffd400;
+    ;
 }
-.fa-list-ul:hover{
-    color: #a0e95d;;
+
+.fa-list-ul:hover {
+    color: #a0e95d;
+    ;
 }
-.fa-notes-medical:hover{
+
+.fa-notes-medical:hover {
     color: rgba(255, 166, 0, 0.911);
 }
-.fa-notes-medical{
+
+.fa-notes-medical {
     font-size: 1.7rem;
 }
+
 
 /* =========add keep inputs======== */
 
@@ -157,8 +164,9 @@ header {
     height: 1.6rem;
     line-height: 2.8rem;
 }
-.edit-txt-input{
-    width:100%;
+
+.edit-txt-input {
+    width: 100%;
     max-height: 5rem;
     border: none;
     outline: none;
@@ -167,6 +175,7 @@ header {
     letter-spacing: 0.12rem;
     font-size: 1.2rem;
 }
+
 
 /* ===sing card colors=== */
 
@@ -216,11 +225,12 @@ header {
     cursor: pointer;
 }
 
-.video-note{
+.video-note {
     border: none;
     border-radius: 0.3rem;
     margin-bottom: 1rem;
 }
+
 
 /* -------smartphone-------- */
 
@@ -247,7 +257,7 @@ header {
     .logo {
         display: none;
     }
-    .keep-list-container{
+    .keep-list-container {
         padding: 0 2rem;
     }
 }
@@ -276,8 +286,9 @@ header {
     img.lens-icon {
         width: 10px;
         height: 10px;
-    } 
+    }
 }
+
 @media (max-width: 670px) {
     .card-container {
         min-width: 10rem;
@@ -285,15 +296,15 @@ header {
         min-height: 10rem;
         font-size: 1.2rem;
     }
-    .filter-container input{
+    .filter-container input {
         width: 10rem;
     }
 }
+
 @media (max-width: 550px) {
     .card-container {
         min-width: 8rem;
         max-width: 10rem;
         min-height: 10rem;
     }
-    
 }
