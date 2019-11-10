@@ -477,9 +477,8 @@ font-size: 1rem;
   }
 
 }
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .side-nav{
-    /* margin-bottom: 2rem; */
     padding: 1rem;
     height: 22vh;
   }
@@ -490,7 +489,8 @@ font-size: 1rem;
     padding-bottom: 0;
   }
   .side-nav-item {
-    width: 6rem;
+    width: 5rem;
+    padding: 0;
   }
   .filter{
     margin-bottom: 1.5rem;

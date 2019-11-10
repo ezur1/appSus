@@ -14,18 +14,6 @@
 } */
 
 
-/*---fonts----*/
-
-@font-face {
-    font-family: 'Kaushan';
-    src: url('../../../fonts/KaushanScript-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Playfair';
-    src: url('../../../fonts/PlayfairDisplay-Regular.ttf');
-}
-
 
 /* =========header======== */
 
@@ -71,7 +59,6 @@ header {
 
 .card-container {
     color: rgb(238, 238, 238);
-    font-family: 'Playfair';
     letter-spacing: 0.12rem;
     font-size: 1.4rem;
     margin: 2rem 2rem 0 0;
@@ -79,7 +66,9 @@ header {
     min-width: 17rem;
     max-width: 17rem;
     min-height: 12rem;
-    border: 1px solid rgba(202, 202, 202, 0.644);
+    border: 1px solid rgba(202, 202, 202, 0.5);
+    border-bottom: 1.5px dotted rgba(248, 210, 140, 0.9);
+    border-top: 1.5px dotted rgba(248, 210, 140, 0.6);
     box-shadow: 12px 12px 5px rgb(27, 27, 27);
     background: #2c2c2c;
     border-radius: 0.5rem;
@@ -172,13 +161,13 @@ header {
 }
 .edit-txt-input{
     width:100%;
-    min-height: 7rem;
+    max-height: 5rem;
     border: none;
     outline: none;
     background: none;
     color: rgb(238, 238, 238);
     letter-spacing: 0.12rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* ===sing card colors=== */
