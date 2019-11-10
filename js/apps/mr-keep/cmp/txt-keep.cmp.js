@@ -50,6 +50,7 @@ export default {
         setBackgroundColor(color) {
             this.cardColor = color;
             console.log('this.color', this.cardColor);
+            this.isShow = !this.isShow;
         },
         showColors() {
             this.isShow = !this.isShow;
