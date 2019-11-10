@@ -14,14 +14,14 @@ export default {
                 <i @click="showColors()" class="fas fa-palette"></i>
                 <i @click="deleteKeep(id)" class="fas fa-trash-alt "></i>
             </div>
-            <color-picker class="color-picker animated bounce" v-show="show"  @changeColor="setBackgroundColor"></color-picker>
+            <color-picker class="color-picker animated bounce" v-show="isShow"  @changeColor="setBackgroundColor"></color-picker>
         </section>
     `,
     props: ['data', 'id'],
     data() {
         return {
             cardColor: '',
-            show: false,
+            isShow: false,
             pinnedColor: null
         }
     },
@@ -32,9 +32,11 @@ export default {
         setBackgroundColor(color) {
             this.cardColor = color;
             console.log('this.color', this.cardColor);
+            this.isShow = !this.isShow;
+
         },
         showColors() {
-            this.show = !this.show;
+            this.isShow = !this.isShow;
         },
         pinKeep(id) {
             this.pinnedColor = !this.pinnedColor;
