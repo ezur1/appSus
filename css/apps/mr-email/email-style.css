@@ -492,7 +492,7 @@ font-size: 1rem;
   }
   .filter-mobile{
     display: block;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
   }
   .hide-mobile{
     display: none;
@@ -514,7 +514,8 @@ font-size: 1rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    padding: 1rem;
   }
   .email-app-container{
     margin-top: 4rem;
