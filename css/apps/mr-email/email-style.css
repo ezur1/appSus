@@ -484,9 +484,10 @@ font-size: 1rem;
     height: 22vh;
   }
   .compose-modal {
-    left: 1rem;
-    width: 21.5rem;
-    height: 40rem;
+    left: .5rem;
+    width: 22.5rem;
+    height: 37.5rem;
+    padding-bottom: 0;
   }
   .side-nav-item {
     width: 6rem;
@@ -531,7 +532,7 @@ font-size: 1rem;
     margin-bottom: 3rem;
   }
   .compose-modal textarea {
-    height: 10rem;
+    height: 14rem;
   }
   .replayBtn {
     padding-top: 1rem;
