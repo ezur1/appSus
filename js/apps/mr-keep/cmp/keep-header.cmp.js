@@ -5,8 +5,7 @@ export default {
     template: `
         <header class="keep-header-container flex space-between align-c">
             <div clas="logo">
-                <i class="far fa-bell flex"></i>
-                <h1>Mr keep</h1>
+                <img src="img/keep-logo.png">       
             </div>
             <div class="filter-container flex">
                 <img src="img/lens.png" class="lens-icon">

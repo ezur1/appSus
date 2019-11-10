@@ -187,6 +187,9 @@
         nav {
             display: none;
         }
+        .site-app-icon {
+            font-size: 2.2rem;
+        }
         .main-app-icon {
             font-size: 2.65rem;
             display: inline;
@@ -207,7 +210,7 @@
             text-align: center;
         }
         header img {
-            width: 70px;
+            width: 80px;
             /* border-radius: 50%; */
         }
     }
