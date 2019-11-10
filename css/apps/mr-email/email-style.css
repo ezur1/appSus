@@ -491,7 +491,7 @@ font-size: 1rem;
     width:10.5rem;
   }
   .filter-mobile{
-    display: inline;
+    display: block;
     margin-bottom: 1.5rem;
   }
   .hide-mobile{
@@ -516,7 +516,7 @@ font-size: 1rem;
     justify-content: space-between;
   }
   .email-app-container{
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
   .compose-subject {
     margin-bottom: 3rem;
