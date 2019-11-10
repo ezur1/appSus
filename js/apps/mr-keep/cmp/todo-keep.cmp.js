@@ -4,7 +4,7 @@ import colorPicker from './color-picker.cmp.js'
 export default {
     template: `
         <section class="card-container flex col align-end" :class="cardColor">
-            <div class="todos">
+            <div class="todos grow">
                 <ul>
                     <h1 class="grow" v-for="(todo, index) in todos" :key="index" :todo="todo"><i class="fas fa-asterisk"></i> {{todo}}</h1>
                 </ul>
@@ -40,7 +40,6 @@ export default {
             this.cardColor = color;
             console.log('this.color', this.cardColor);
             this.isShow = !this.isShow;
-
         },
         showColors() {
             this.isShow = !this.isShow;
